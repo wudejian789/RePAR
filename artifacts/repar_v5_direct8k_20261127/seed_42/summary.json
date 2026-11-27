@@ -1,0 +1,59 @@
+{
+  "completed_at": "2026-11-27T17:17:44.626508+08:00",
+  "math": {
+    "score": 40.666666666666664,
+    "fully_correct": 6,
+    "count": 19,
+    "errors": 0,
+    "calls": 131,
+    "cache_hits": 0,
+    "prompt_tokens": 930363,
+    "completion_tokens": 140918,
+    "repairs": 0,
+    "tool_calls": 31
+  },
+  "longbench": {
+    "correct": 35,
+    "count": 125,
+    "accuracy": 0.28,
+    "errors": 0,
+    "old_correct": 34,
+    "new_only_correct": [
+      "66f94f9ebb02136c067c4fde",
+      "66ec0c4c821e116aacb1994a",
+      "66ed875e821e116aacb2023e",
+      "6701cda0bb02136c067cb6eb",
+      "66ec356a821e116aacb1c22b",
+      "66eb873c5a08c7b9b35dd849",
+      "66efaf70821e116aacb234bd",
+      "66fe81dcbb02136c067ca2de",
+      "66f0ed5a821e116aacb265ab",
+      "66ec5af0821e116aacb1ce41",
+      "66f8c6b4bb02136c067c4480",
+      "66f245cc821e116aacb28698",
+      "66f379e8821e116aacb2d161"
+    ],
+    "old_only_correct": [
+      "66f78ecfbb02136c067c2f12",
+      "66f3e58c821e116aacb2fabc",
+      "66f2cacb821e116aacb2ba50",
+      "66f2c44e821e116aacb2b826",
+      "66f41108821e116aacb30c41",
+      "67078ecabb02136c067d0b89",
+      "66fbe00fbb02136c067c84c8",
+      "66f43414821e116aacb310a1",
+      "66fc0152bb02136c067c8826",
+      "66f3e604821e116aacb2fadf",
+      "66fb6527bb02136c067c7b4f",
+      "66f2a7a9821e116aacb2a721"
+    ],
+    "calls": 1222,
+    "cache_hits": 0,
+    "prompt_tokens": 5547870,
+    "completion_tokens": 177543,
+    "repairs": 0,
+    "tool_calls": 324
+  },
+  "source_policy": "Original text partitioned by EmbeddingGemma, spaCy entity graph",
+  "exposure": "Development comparison on previously evaluated benchmarks."
+}

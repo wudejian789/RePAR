@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "reference": "artifacts/repar_v5_direct8k_20261127/seed_42",
+  "backbone_reference": "artifacts/repar_v4_r27_27b_20261120",
+  "stats": {
+    "math": {
+      "model_calls": 76,
+      "cached_calls": 0,
+      "control_repairs": 0,
+      "prompt_tokens": 170750,
+      "completion_tokens": 75132,
+      "no_tool_runs": 19,
+      "empty_drafts": 0,
+      "draft_length": 0,
+      "final_length": 2,
+      "score": 138.33333333333334,
+      "fully_correct": 17,
+      "questions": 19,
+      "draft_usage": {
+        "prompt_tokens": 3741,
+        "completion_tokens": 43472
+      },
+      "final_usage": {
+        "prompt_tokens": 53822,
+        "completion_tokens": 30276
+      },
+      "terminations": {
+        "model_sufficient": 19
+      },
+      "tool_calls_by_name": {}
+    },
+    "longbench": {
+      "model_calls": 784,
+      "cached_calls": 0,
+      "control_repairs": 0,
+      "prompt_tokens": 2951524,
+      "completion_tokens": 175488,
+      "no_tool_runs": 47,
+      "empty_drafts": 0,
+      "draft_length": 0,
+      "final_length": 0,
+      "score": 46,
+      "source_slices_checked": 1844,
+      "questions": 125,
+      "draft_usage": {
+        "prompt_tokens": 37645,
+        "completion_tokens": 137521
+      },
+      "final_usage": {
+        "prompt_tokens": 665897,
+        "completion_tokens": 1000
+      },
+      "terminations": {
+        "model_sufficient": 119,
+        "budget": 5,
+        "no_progress": 1
+      },
+      "tool_calls_by_name": {
+        "tree_search": 113,
+        "graph_neighbors": 7,
+        "read": 6
+      },
+      "gained": 31,
+      "lost": 20,
+      "mcnemar_exact_p": 0.16077960181198847
+    }
+  }
+}

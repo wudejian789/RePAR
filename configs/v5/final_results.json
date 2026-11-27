@@ -1,0 +1,37 @@
+{
+  "selected_at": "2026-11-27T17:32:20.063189+08:00",
+  "selection": "User-confirmed final RePAR v5 result; seed 42 only.",
+  "solver_seed": 42,
+  "direct_answer_max_tokens": 8192,
+  "math_final_max_tokens": 4096,
+  "longbench_final_max_tokens": 128,
+  "experiment_config": "configs/v5/experiment_768_42_direct8k.json",
+  "solver_config": "configs/v5/solver_768_42_direct8k.json",
+  "runs": {
+    "08": {
+      "model": "Qwen3.5-0.8B-Q4_K_M",
+      "directory": "artifacts/repar_v5_direct8k_20261127/seed_42",
+      "summary": "artifacts/repar_v5_direct8k_20261127/seed_42/summary.json",
+      "audit": "artifacts/repar_v5_direct8k_20261127/seed_42/audit_v5.json",
+      "protocol_sha256": "9fb68727777c8d7b6255aea43c634e3deb7bac6edbf541c1121c7eaf467c6bf6"
+    },
+    "27": {
+      "model": "Qwen3.8-27B-UD-Q4_K_M",
+      "directory": "artifacts/repar_v5_27b_direct8k_20261127/seed_42",
+      "summary": "artifacts/repar_v5_27b_direct8k_20261127/seed_42/summary.json",
+      "audit": "artifacts/repar_v5_27b_direct8k_20261127/seed_42/audit_v5.json",
+      "protocol_sha256": "6fe60f2895539fdc64c3963477f03257f729ecf2564904e8ad5364edf0acb76b",
+      "experiment_config": "configs/v5/experiment_768_42_direct8k_27b.json",
+      "solver_config": "configs/v5/solver_768_42_direct8k_27b.json"
+    }
+  },
+  "historical_1k_reference": "artifacts/repar_v5_20261126/seed_42",
+  "limitations": "Previously observed benchmarks; seed 42 only; per-backbone frozen sampling; no multi-seed claim.",
+  "summary": "artifacts/repar_v5_final_20261127/summary_with_27b.json",
+  "report": "docs/2026-11-27_2019_v5双底座最终结果与基线指标汇总.md",
+  "summary_sha256": "59b60c97ec837d1dba385882b3220f13df4cee9765f5f693e419229c5096a958",
+  "status": "final",
+  "confirmed_by": "user",
+  "pending_runs": {},
+  "updated_at": "2026-11-27T20:19:50.435760+08:00"
+}

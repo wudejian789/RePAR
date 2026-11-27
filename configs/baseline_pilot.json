@@ -1,0 +1,13 @@
+{
+  "dataset": "data/longbench_v2.json",
+  "model_config": "configs/repar_v2.json",
+  "encoder": "models/all-MiniLM-L6-v2",
+  "methods": ["BM25_RAG", "RaptorRAG", "HippoRAG2", "HyperGraphRAG"],
+  "case_seconds": 180,
+  "call_seconds": 60,
+  "method_parameters": {
+    "RaptorRAG": {"num_layers": 5, "summary_tokens": 100, "seed": 42, "max_context_tokens": 8000},
+    "HippoRAG2": {"ner_tokens": 2048, "triple_tokens": 4096},
+    "HyperGraphRAG": {"extraction_tokens": 2048, "gleaning": 2}
+  }
+}

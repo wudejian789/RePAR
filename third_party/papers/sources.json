@@ -1,0 +1,38 @@
+[
+  {
+    "name": "react",
+    "url": "https://arxiv.org/html/2210.03629",
+    "local_file": "react.txt",
+    "sha256": "70767d09b80dad4c727199e6e57b7aaabc7d25fbe01cea48b7aa7d8a80863123"
+  },
+  {
+    "name": "ircot",
+    "url": "https://arxiv.org/html/2212.10509",
+    "local_file": "ircot.txt",
+    "sha256": "0711a1857f160d5922639707f05545d8948f318570c312ad10e959e717b1cf01"
+  },
+  {
+    "name": "selfrag",
+    "url": "https://arxiv.org/html/2310.11511",
+    "local_file": "selfrag.txt",
+    "sha256": "135671a2c56720a9038eea96b01c54d988c0fa2bc9195cfba63e31655db7c43d"
+  },
+  {
+    "name": "reflexion",
+    "url": "https://arxiv.org/html/2303.11366v4",
+    "local_file": "reflexion.txt",
+    "sha256": "81cfb8a78ff87726b09f7baad41f03a51b3f2773862531bd18a89a39638bf761"
+  },
+  {
+    "name": "react_repository",
+    "url": "https://raw.githubusercontent.com/ysymyth/ReAct/master/README.md",
+    "local_file": "react_repository.txt",
+    "sha256": "94b93c48015767e0351bd44ae9236daf556eecfb1b99191634151d411cd5983b"
+  },
+  {
+    "name": "reflexion_repo",
+    "url": "https://raw.githubusercontent.com/noahshinn/reflexion/main/README.md",
+    "local_file": "reflexion_repo.txt",
+    "sha256": "2292e383d6803e985d9fbc0111decef52ddbc74de59b80754a7e43423dd24e2e"
+  }
+]

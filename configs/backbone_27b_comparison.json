@@ -1,0 +1,34 @@
+{
+  "experiment_id": "repar-v2-v3-27b-20261119",
+  "output": "artifacts/repar_27b_comparison_20261119",
+  "conditions": [
+    "configs/backbone_27b_v2.json",
+    "configs/backbone_27b_v3.json"
+  ],
+  "selection": "v2 and current v3, both full19 MATH/full125 Multi-Document QA",
+  "solver": {
+    "base_url": "http://127.0.0.1:9090",
+    "model": "Qwen3.8-27B-UD-Q4_K_M",
+    "thinking": false,
+    "temperature": 0.1,
+    "seed": 42
+  },
+  "order": "Freeze both before generation, run v2 all then v3 all on the single-slot service",
+  "cache": "Fresh separate caches; no imported historical results",
+  "historical_references": [
+    "artifacts/math_2025_national_i_v5/summary.json",
+    "artifacts/math_2025_national_i_v5/repar.jsonl",
+    "artifacts/math_2025_national_i_v5/repar_grades.jsonl",
+    "artifacts/experiment_v2/repar.jsonl",
+    "artifacts/repar_v3_core_r1_20261119/summary.json",
+    "artifacts/repar_v3_core_r1_20261119/math/predictions.jsonl",
+    "artifacts/repar_v3_core_r1_20261119/math/grades.jsonl",
+    "artifacts/repar_v3_core_r1_20261119/longbench/predictions.jsonl"
+  ],
+  "limitations": [
+    "Same27B solver and anonymous judge may have correlated errors",
+    "Existing0.8B references are reused; not new equal-hardware reruns",
+    "Parameter count alone is not isolated from model family, quantization and serving implementation",
+    "No fixed graph route, task categorization, calculator, final-answer recovery or extra answer review"
+  ]
+}

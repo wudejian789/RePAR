@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "checked_at": "2026-11-27T17:40:05.439546+08:00",
+  "combinations": 24,
+  "measured": 14,
+  "unmeasured": 10,
+  "source_hashes_verified": 10,
+  "core_source_hashes_verified": 60,
+  "report_links_verified": 5,
+  "csv_rows_verified": 24,
+  "token_arithmetic": "passed",
+  "missing_values": "passed",
+  "final_v5_registration": "passed",
+  "no_model_calls_in_summary_phase": true
+}

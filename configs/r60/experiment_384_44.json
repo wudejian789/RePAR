@@ -1,0 +1,42 @@
+{
+  "math_questions": "data/MATH_2025_NATIONAL_I/MATH_2025_NATIONAL_I_QA.jsonl",
+  "math_textbook": "data/MATH_2025_NATIONAL_I/textbook_chunks.jsonl",
+  "math_parent": "artifacts/math_2025_national_i_v5",
+  "longbench_data": "data/longbench_v2.json",
+  "longbench_parent": "artifacts/experiment_v2/repar.jsonl",
+  "longbench_final_max_tokens": 128,
+  "longbench_answer_grammar": "root ::= \"The correct answer is (\" [ABCD] \")\"",
+  "judge": {
+    "base_url": "http://127.0.0.1:9090",
+    "model": "Qwen3.8-27B-UD-Q4_K_M",
+    "deployment_id": "math2025-judge-qwen38-27b-ud-q4km-9090-20261118",
+    "temperature": 0,
+    "seed": 20261118,
+    "enable_thinking": false,
+    "max_tokens": 3072,
+    "replicate_seeds": [
+      20261118,
+      20261119,
+      20261120
+    ]
+  },
+  "experiment_id": "repar-v4-r60-384-seed-44",
+  "output": "artifacts/repar_v4_r60_20261126/tokens_384/seed_44",
+  "dense_index_directory": "artifacts/repar_v4_r60_20261126/tokens_384/indexes",
+  "variant": "bound_views_v4_r60",
+  "method_display": "v4-r60 (384 tokens, seed 44)",
+  "source_policy": "Original text partitioned by EmbeddingGemma, spaCy entity graph",
+  "exposure": "Development comparison on previously evaluated benchmarks.",
+  "report_filename": "2026-11-26_0327_r60_384_seed_44.md",
+  "additional_snapshot_files": [
+    "scripts/run_r60.py",
+    "scripts/run_repar_v4.py",
+    "scripts/research_kb_v4.py"
+  ],
+  "immutable_references": [
+    "artifacts/repar_v4_r27_20261120/protocol.json",
+    "models/EmbeddingGemma-300M/source_manifest.json",
+    "artifacts/repar_v4_r60_20261126/tokens_384/indexes/*.pkl"
+  ],
+  "solver_config": "configs/r60/solver_384_44.json"
+}

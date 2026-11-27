@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repar"
+version = "0.1.0"
+description = "ReAct over parameterized ordered semantic trees and evidence graphs"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.0", "scipy>=1.13", "scikit-learn>=1.5", "requests>=2.32"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "beautifulsoup4>=4", "matplotlib>=3.8", "gguf>=0.19"]
+graph = ["spacy>=3.8,<3.9"]
+agent-v3 = ["jsonschema>=4"]
+agent-v4 = ["jsonschema>=4"]
+retrieval-encoder = ["torch>=2.5,<3", "sentence-transformers>=3.4,<4"]
+dense-index = ["torch>=2.6,<3", "transformers>=4.57,<5", "sentence-transformers>=5.1,<6"]
+source-reranker = ["torch>=2.5,<3", "transformers>=4.45,<5", "safetensors>=0.4"]
+baselines = [
+  "torch>=2.5,<3", "sentence-transformers>=3.4,<4", "transformers>=4.45,<5",
+  "openai>=1.55,<4", "tiktoken>=0.7", "tenacity>=8.5,<9", "umap-learn>=0.5",
+  "python-igraph>=0.11,<0.12", "nano-vectordb==0.0.4.3", "networkx>=3",
+  "xxhash>=3", "pandas>=2", "pyarrow>=16", "pydantic>=2",
+  "aioboto3>=13", "ollama>=0.4", "litellm>=1.73,<1.74", "nest-asyncio>=1.6"
+]
+baseline-sources = ["pypdf>=5"]
+
+[project.scripts]
+repar = "repar.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src", "."]
+include = ["repar", "repar.*", "baselines", "baselines.*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+"*" = ["README.md"]
+"baselines" = ["catalog.json"]
+"baselines.RaptorRAG" = ["sources.json"]
+"baselines.HippoRAG2" = ["sources.json"]
+"baselines.HyperGraphRAG" = ["sources.json"]
+"baselines.evaluation" = ["0shot_rag.txt"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]

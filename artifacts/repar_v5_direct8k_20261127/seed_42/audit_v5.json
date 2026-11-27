@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "reference": "artifacts/repar_v4_r61_20261126/tokens_768/seed_42",
+  "stats": {
+    "math": {
+      "source_slices_checked": 455,
+      "model_calls": 131,
+      "cached_calls": 0,
+      "control_repairs": 0,
+      "prompt_tokens": 930363,
+      "completion_tokens": 140918,
+      "no_tool_runs": 0,
+      "empty_drafts": 0,
+      "draft_length": 10,
+      "final_length": 7,
+      "score": 40.666666666666664,
+      "fully_correct": 6,
+      "questions": 19,
+      "draft_usage": {
+        "prompt_tokens": 3741,
+        "completion_tokens": 88385
+      },
+      "final_usage": {
+        "prompt_tokens": 207111,
+        "completion_tokens": 38515
+      },
+      "terminations": {
+        "budget": 2,
+        "model_sufficient": 17
+      },
+      "tool_calls_by_name": {
+        "tree_search": 26,
+        "graph_neighbors": 3,
+        "graph_entities": 2
+      }
+    },
+    "longbench": {
+      "source_slices_checked": 4312,
+      "model_calls": 1222,
+      "cached_calls": 0,
+      "control_repairs": 0,
+      "prompt_tokens": 5547870,
+      "completion_tokens": 177543,
+      "no_tool_runs": 0,
+      "empty_drafts": 0,
+      "draft_length": 4,
+      "final_length": 0,
+      "score": 35,
+      "questions": 125,
+      "draft_usage": {
+        "prompt_tokens": 37645,
+        "completion_tokens": 84403
+      },
+      "final_usage": {
+        "prompt_tokens": 947824,
+        "completion_tokens": 1000
+      },
+      "terminations": {
+        "budget": 37,
+        "model_sufficient": 87,
+        "no_progress": 1
+      },
+      "tool_calls_by_name": {
+        "tree_search": 250,
+        "graph_neighbors": 37,
+        "graph_entities": 33,
+        "read": 4
+      },
+      "gained": 18,
+      "lost": 8,
+      "mcnemar_exact_p": 0.07551869750022888
+    }
+  }
+}

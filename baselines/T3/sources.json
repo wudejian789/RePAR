@@ -1,0 +1,296 @@
+{
+  "title": "RAG over Thinking Traces Can Improve Reasoning Tasks",
+  "arxiv": "2605.03344",
+  "github": "Narabzad/t3",
+  "selection": "separate_external_trace_condition",
+  "checked_at_utc": "2026-11-18T13:38:24.145109+00:00",
+  "paper": {
+    "url": "https://arxiv.org/pdf/2605.03344",
+    "sha256": "a56dce38d132e25face7972b798ffb1ed419f87d7a339007f42eea49fc15024f",
+    "bytes": 705258
+  },
+  "upstream": {
+    "repository": "https://github.com/Narabzad/t3",
+    "commit": "f516b541d94c0597d7ea1dc3b8f6e38892d1d865",
+    "license": null,
+    "source_dir": "third_party/baselines/T3/f516b541d94c0597d7ea1dc3b8f6e38892d1d865",
+    "scope": "Source/config/license snapshot, excludes datasets, generated outputs and weights",
+    "files": [
+      {
+        "path": "README.md",
+        "sha256": "be1127649abc8a86261c3ee041af9e2427cf3d9ab4d96982d9f6088ff8c77647",
+        "bytes": 10271
+      },
+      {
+        "path": "data_transform/README.md",
+        "sha256": "f1fe24714fdf436e4988141186fe2cfda1125e0baa9c9c5235280703b11a4662",
+        "bytes": 1382
+      },
+      {
+        "path": "data_transform/transform.py",
+        "sha256": "8a4ebee47a97cc4c8fdbb3df17af9099d15399c8159fc494f8122b6b10b8988f",
+        "bytes": 6035
+      },
+      {
+        "path": "eval/scripts/gemini_proxy_server.py",
+        "sha256": "7c05e35eb35939b930ad61458089ca17ee1ec6531e08322433bddab5a6ba35b2",
+        "bytes": 3514
+      },
+      {
+        "path": "eval/tasks/aime/aime22_nofigures_agg8.yaml",
+        "sha256": "045b0a8d6271e5ba94eadd6aaf1eaf3e775e2468afc239b7b94c30938050bad3",
+        "bytes": 1199
+      },
+      {
+        "path": "eval/tasks/aime/aime22_nofigures_retrieval_agg8.yaml",
+        "sha256": "aae01953e346179253f3a6c3ffde5460eeb73edf848dd14d38bcd61935c23086",
+        "bytes": 1239
+      },
+      {
+        "path": "eval/tasks/aime/aime23_nofigures_agg8.yaml",
+        "sha256": "5cc1050d43dccceadcc30172ba1f012cfdfb10b4ede56d2ffb39acfd13462260",
+        "bytes": 1199
+      },
+      {
+        "path": "eval/tasks/aime/aime23_nofigures_retrieval_agg8.yaml",
+        "sha256": "ff920473be3fc98c9d7b4e531a20bc65f9499c93791e97aa9f520ee5d8b2cfe7",
+        "bytes": 1239
+      },
+      {
+        "path": "eval/tasks/aime/aime24_figures.yaml",
+        "sha256": "3a492dce332baf7aab4d2cca656f4426ccecab0ac078806964db4e1201704a79",
+        "bytes": 654
+      },
+      {
+        "path": "eval/tasks/aime/aime24_figures_agg16.yaml",
+        "sha256": "43a42eb07fe30a8bd46b9ab2d5e8f5847b0b33ec5183c1a3a91aa2dcf6f88765",
+        "bytes": 1336
+      },
+      {
+        "path": "eval/tasks/aime/aime24_figures_agg64.yaml",
+        "sha256": "b861bda605b905c0083a845196bceb820827ca8adc76eb0ad601a76e7c5959f5",
+        "bytes": 1607
+      },
+      {
+        "path": "eval/tasks/aime/aime24_figures_agg8.yaml",
+        "sha256": "171a80b9570959a557925ac7bb650f386e5c64902af8db8e8d38bd020e183d8b",
+        "bytes": 1197
+      },
+      {
+        "path": "eval/tasks/aime/aime24_nofigures.yaml",
+        "sha256": "39660a53be8a1df0618f243751820ff56673de6a454610ff79aa42ff3aa25ced",
+        "bytes": 571
+      },
+      {
+        "path": "eval/tasks/aime/aime24_nofigures_agg16.yaml",
+        "sha256": "f8cc25b848ae4bceff88eb20cf6d2939104bba27e2cc9c6e7fef324c0ecc2591",
+        "bytes": 1340
+      },
+      {
+        "path": "eval/tasks/aime/aime24_nofigures_agg2.yaml",
+        "sha256": "ce7cf486df1bfbe49c4a3a81f9bbfee2a4887778e6e6d2742e3ba18dc03eee3a",
+        "bytes": 866
+      },
+      {
+        "path": "eval/tasks/aime/aime24_nofigures_agg4.yaml",
+        "sha256": "ac34451cbd1095d537a373032d393202dfbbbaf846a1520ca455d84832b51da8",
+        "bytes": 1067
+      },
+      {
+        "path": "eval/tasks/aime/aime24_nofigures_agg64.yaml",
+        "sha256": "9bec024e178d68b8dd30b5a4dc6124ff441554847d213d8c54a9402141998e2a",
+        "bytes": 1611
+      },
+      {
+        "path": "eval/tasks/aime/aime24_nofigures_agg8.yaml",
+        "sha256": "7972ac855f6d09edab17e96679abf1927a9ef005879172898f0b56598ee93ec3",
+        "bytes": 1201
+      },
+      {
+        "path": "eval/tasks/aime/aime24_nofigures_retrieval.yaml",
+        "sha256": "e142011b9a2c7818a41b4abc2d40f266e43fa9abae1d4c97ad07c4f05b0be40b",
+        "bytes": 612
+      },
+      {
+        "path": "eval/tasks/aime/aime24_nofigures_retrieval_agg16.yaml",
+        "sha256": "d2a7dcc4c81ca7f33a16d4b43154b90a0cbb710c5927a6db0f758508bebb4993",
+        "bytes": 1380
+      },
+      {
+        "path": "eval/tasks/aime/aime24_nofigures_retrieval_agg8.yaml",
+        "sha256": "f8e219c214606a9e65e4dd7f11226b32788568884a756d5c4a3cc1333069cfcb",
+        "bytes": 1241
+      },
+      {
+        "path": "eval/tasks/aime/aime25_nofigures.yaml",
+        "sha256": "9b5ca5bb5cfbed1a5216f0bec02a374171fe391bac3b4f50476466212b925631",
+        "bytes": 557
+      },
+      {
+        "path": "eval/tasks/aime/aime25_nofigures_agg8.yaml",
+        "sha256": "ac1c278a82d595357ce30790a574d21c29bd0eb2981fff49bce9aad112d11283",
+        "bytes": 1190
+      },
+      {
+        "path": "eval/tasks/aime/aime25_nofigures_retrieval_agg4.yaml",
+        "sha256": "bd4d8edcbc660901e220d0d6cdbd18e64755c4dcb758d105eba317e8b9c22337",
+        "bytes": 1103
+      },
+      {
+        "path": "eval/tasks/aime/aime25_nofigures_retrieval_agg8.yaml",
+        "sha256": "fc500ee3054978c1417c95b5936bc54b10a2e623601e6dda4ba4136934638816",
+        "bytes": 1237
+      },
+      {
+        "path": "eval/tasks/aime/aime26_nofigures_agg8.yaml",
+        "sha256": "0ce9a514b143bbaedad3a2a96a42b877581986c12b0225c9745ffc9aa27fa104",
+        "bytes": 1190
+      },
+      {
+        "path": "eval/tasks/aime/aime26_nofigures_retrieval_agg4.yaml",
+        "sha256": "7f1f70906ec05112f8aa7ad913738832e2e41f1a52973d8461e5b7a1db221133",
+        "bytes": 1103
+      },
+      {
+        "path": "eval/tasks/aime/aime26_nofigures_retrieval_agg8.yaml",
+        "sha256": "982ec0c6401dea9a7bfa59203d68d6df736b43cc01f9b1fc2587f133daec93bf",
+        "bytes": 1237
+      },
+      {
+        "path": "eval/tasks/aime/aime_2024_agg8.yaml",
+        "sha256": "01592ed22f2f7f1ff2f0f245404a15f849614efede2f3d065c1f17911078940a",
+        "bytes": 1329
+      },
+      {
+        "path": "eval/tasks/aime/aime_2024_rebase.yaml",
+        "sha256": "21bb072ae8211c49e21872456ae9357a8cad7f52db2cbb14ee47fd2af23755f6",
+        "bytes": 1594
+      },
+      {
+        "path": "eval/tasks/aime/aime_figures.yaml",
+        "sha256": "1d85904ad59a8af663c39a7ca3341ac2af2ee1205a3bf2c0f6bf92eaa9f66428",
+        "bytes": 563
+      },
+      {
+        "path": "eval/tasks/aime/aime_nofigures.yaml",
+        "sha256": "5658740c821155624ffb01655335280f73a92ac3aba26179450045b0b58e8d98",
+        "bytes": 567
+      },
+      {
+        "path": "eval/tasks/aime/hmmt_feb_2025_nofigures_agg8.yaml",
+        "sha256": "cb0c46e05e652ae4b053d469e4a9938996c99e585c142bf2b1f984616c8a364d",
+        "bytes": 1298
+      },
+      {
+        "path": "eval/tasks/aime/hmmt_feb_2025_nofigures_retrieval_agg8.yaml",
+        "sha256": "87e768465cb9b7a93f8d9e55b24659d40a8e0047ef866dae9ca484095cd1f25c",
+        "bytes": 1338
+      },
+      {
+        "path": "eval/tasks/aime/hmmt_feb_2026_nofigures_agg8.yaml",
+        "sha256": "de235b07c80a2d398638a6e1db8ea281bd3a0c5d8cb995f8894b5b73fd695e5f",
+        "bytes": 1298
+      },
+      {
+        "path": "eval/tasks/aime/hmmt_feb_2026_nofigures_retrieval_agg8.yaml",
+        "sha256": "d0d232bbfae1a0cf729c52065fd1ede7c36ad8985455f5f6d5544e024cdf8e6e",
+        "bytes": 1338
+      },
+      {
+        "path": "eval/tasks/aime/hmmt_nov_2025_nofigures_agg8.yaml",
+        "sha256": "523ae50fd250f11a9115c0168ea4dbff9e953d112b9a98c2d7aaa1e4f041dc4a",
+        "bytes": 1298
+      },
+      {
+        "path": "eval/tasks/aime/hmmt_nov_2025_nofigures_retrieval_agg8.yaml",
+        "sha256": "418ddfcd20b865ebc7626167e093e301d48d2edb54f3c8f1e542e164cdca421c",
+        "bytes": 1338
+      },
+      {
+        "path": "eval/tasks/aime/utils.py",
+        "sha256": "4d058964d9a46149122d0b4587f2f57170913ef00118fa054b3c4b8e6548e3d0",
+        "bytes": 45075
+      },
+      {
+        "path": "eval/tasks/gpqa/gpqa_diamond_openai.yaml",
+        "sha256": "1f5377f244d6ce0c7d66eaed3cdf0dca2b40bd4d9e33f82dd9d017c06556e4f6",
+        "bytes": 2461
+      },
+      {
+        "path": "eval/tasks/gpqa/gpqa_diamond_openai_agg1.yaml",
+        "sha256": "0ab0c8ad2134f0d33292b3dd5eeb0baa28f1031941cddc60db68421e79837b03",
+        "bytes": 723
+      },
+      {
+        "path": "eval/tasks/gpqa/gpqa_diamond_openai_agg4.yaml",
+        "sha256": "58a4aaaf91cc5ea75ff6d90c27b484e58388d8a61bf21cc28907c782e67ed3a7",
+        "bytes": 1176
+      },
+      {
+        "path": "eval/tasks/gpqa/gpqa_diamond_openai_agg64.yaml",
+        "sha256": "b36d14ce8f6a869e2faa4f6b6ebee32f9c852e7b111dbe6d1c53d32aade20862",
+        "bytes": 3395
+      },
+      {
+        "path": "eval/tasks/gpqa/gpqa_diamond_openai_agg8.yaml",
+        "sha256": "c91704215fc40b76e37e472e322a9edd987feb0cb34592c5a8e0a490882f5eb2",
+        "bytes": 1310
+      },
+      {
+        "path": "eval/tasks/gpqa/gpqa_diamond_openai_maj64_cov64.yaml",
+        "sha256": "5dfcebac78c027bd3010b001df1bc1c8f205c5b0b489bbb136bff07e41fd03a9",
+        "bytes": 2356
+      },
+      {
+        "path": "eval/tasks/gpqa/gpqa_diamond_openai_retrieval_agg1.yaml",
+        "sha256": "d8b46c529b6eb2b5f956e16259364c8cf71228ce6eac301e7342162ae98b7647",
+        "bytes": 763
+      },
+      {
+        "path": "eval/tasks/gpqa/gpqa_diamond_openai_retrieval_agg4.yaml",
+        "sha256": "5c5b956d8673da7a07ce7362501035f36ddea1d1cf3b32c52ab450d6a5a3a26c",
+        "bytes": 1216
+      },
+      {
+        "path": "eval/tasks/gpqa/gpqa_diamond_openai_retrieval_agg8.yaml",
+        "sha256": "9c2b6339ebff4cb0a8a481f9f39215bb45b0093c688d43998b1be7d05e3e85da",
+        "bytes": 1350
+      },
+      {
+        "path": "eval/tasks/lcb/lcb_v4mv2_agg1.yaml",
+        "sha256": "bf0674bfcff6839027de50edf7f019d94cca492be7a0de141aa200266f5a7933",
+        "bytes": 736
+      },
+      {
+        "path": "eval/tasks/lcb/lcb_v4mv2_agg4.yaml",
+        "sha256": "f74da66c8f6274ac0a92c1c45e3508774cff75ed217c6cc6887fd570c57fc530",
+        "bytes": 595
+      },
+      {
+        "path": "eval/tasks/lcb/lcb_v4mv2_retrieval_agg1.yaml",
+        "sha256": "6162e64db70521219ddeca09265f9a233e27d68d156b819eaa4b19b07ea3a561",
+        "bytes": 619
+      },
+      {
+        "path": "eval/tasks/lcb/lcb_v4mv2_retrieval_agg4.yaml",
+        "sha256": "8245f149a72d4c55d2280b7ef5b6dfec3f576bcfe9da121095698698c362b314",
+        "bytes": 620
+      },
+      {
+        "path": "eval/tasks/lcb/lcb_v6mv5_agg1.yaml",
+        "sha256": "857486ee4bb2aefe3c524b4bae117f265c977fce1519f6ff06316db7a444f898",
+        "bytes": 690
+      },
+      {
+        "path": "eval/tasks/lcb/lcb_v6mv5_agg4.yaml",
+        "sha256": "5eaae686b614ac224b74054f6e96f268ea87c7cd080822debe188613e23e668c",
+        "bytes": 689
+      },
+      {
+        "path": "eval/tasks/lcb/lcb_v6mv5_retrieval_agg4.yaml",
+        "sha256": "e845c4f05ba3c0cac70c09d9e8d0b8856f50c2cb9b695127cf8d400675628856",
+        "bytes": 714
+      }
+    ]
+  }
+}

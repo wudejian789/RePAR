@@ -1,0 +1,46 @@
+{
+  "experiment_id": "repar-v3-27b-20261119",
+  "output": "artifacts/repar_27b_comparison_20261119/v3",
+  "solver_config": "configs/repar_v3_27b.json",
+  "math_questions": "data/MATH_2025_NATIONAL_I/MATH_2025_NATIONAL_I_QA.jsonl",
+  "math_textbook": "data/MATH_2025_NATIONAL_I/textbook_chunks.jsonl",
+  "math_parent": "artifacts/math_2025_national_i_v5",
+  "longbench_data": "data/longbench_v2.json",
+  "longbench_parent": "artifacts/experiment_v2/repar.jsonl",
+  "longbench_final_max_tokens": 128,
+  "longbench_answer_grammar": "root ::= \"The correct answer is (\" [ABCD] \")\"",
+  "judge": {
+    "base_url": "http://127.0.0.1:9090",
+    "model": "Qwen3.8-27B-UD-Q4_K_M",
+    "deployment_id": "math2025-judge-qwen38-27b-ud-q4km-9090-20261118",
+    "temperature": 0,
+    "seed": 20261118,
+    "enable_thinking": false,
+    "max_tokens": 3072,
+    "replicate_seeds": [
+      20261118,
+      20261119,
+      20261120
+    ]
+  },
+  "source_policy": "No data cleaning, rewriting, filtering, or repartitioning; reuse existing exact context and v2 tree/entity indexes",
+  "exposure": "Both datasets and previous 0.8B results are known. Full paired backbone comparison; same unchanged workflow per version, no per-question rules or score-driven changes.",
+  "selection": "all19 math and all125 Multi-Document QA; report every outcome, no question-level routing or favorable subset selection",
+  "reference_policy": "Fresh condition caches, no historical request or prediction import. Same 27B model is used for solver and anonymous non-choice judge in separate calls; self-evaluation bias is a limitation.",
+  "variant": "retrieval_core_r1",
+  "comparison_boundary": {
+    "model_substitution": "Swap solver to the user-selected 27B endpoint; preserve each workflow and its controller/evidence budgets",
+    "shared_final": "MATH original free-form4096; LongBench original grammar128",
+    "judge": "Existing anonymous double/triple grading; same27B weights as solver, explicitly disclosed",
+    "context": "131072 actual server slot capacity; no corpus/index changes",
+    "limits": "Model family/quantization/server also differ from0.8B; size alone not causally isolated"
+  },
+  "method_display": "v3 / Qwen3.8-27B",
+  "additional_snapshot_files": [
+    "scripts/run_backbone_comparison.py",
+    "tests/test_backbone_comparison.py",
+    "configs/backbone_27b_comparison.json",
+    "configs/repar_v2.json",
+    "configs/repar_v3.json"
+  ]
+}

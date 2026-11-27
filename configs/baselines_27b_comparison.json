@@ -1,0 +1,36 @@
+{
+  "experiment_id": "direct-bm25-27b-20261119",
+  "output": "artifacts/baselines_27b_20261119",
+  "conditions": [
+    "configs/baseline_27b_direct.json",
+    "configs/baseline_27b_bm25.json"
+  ],
+  "selection": "all19 MATH/all125 LongBench for Direct and BM25_RAG",
+  "solver": {
+    "base_url": "http://127.0.0.1:9090",
+    "model": "Qwen3.8-27B-UD-Q4_K_M",
+    "deployment_id": "qwen38-27b-ud-q4km-9090-b12283-ctx131072-20261119",
+    "context_window": 131072,
+    "temperature": 0.1,
+    "seed": 42,
+    "enable_thinking": false
+  },
+  "order": "Freeze both before generation; Direct all, then BM25_RAG all",
+  "historical_references": [
+    "artifacts/math_2025_national_i_v5/summary.json",
+    "artifacts/experiment_v2/summary.json",
+    "artifacts/experiment/direct.jsonl",
+    "artifacts/experiment/bm25.jsonl",
+    "artifacts/repar_v3_core_r1_20261119/summary.json",
+    "artifacts/repar_27b_comparison_20261119/summary.json",
+    "artifacts/repar_27b_comparison_20261119/completion.json",
+    "artifacts/repar_27b_comparison_20261119/v2/audit.json",
+    "artifacts/repar_27b_comparison_20261119/v3/audit.json"
+  ],
+  "limitations": [
+    "Same27B solver and math judge may have correlated errors",
+    "Direct context exceeds window: original fixed head/tail truncation is disclosed",
+    "Existing0.8B and27Bv2/v3 scores are reused, not rerun",
+    "Generation settings unchanged; no corpus cleaning or score-dependent reruns"
+  ]
+}

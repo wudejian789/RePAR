@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "RaptorRAG": {"title": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval", "arxiv": "2401.18059", "github": "parthsarthi03/raptor", "selection": "candidate"},
+  "HippoRAG2": {"title": "From RAG to Memory: Non-Parametric Continual Learning for Large Language Models", "arxiv": "2502.14802", "github": "OSU-NLP-Group/HippoRAG", "selection": "candidate"},
+  "RAGen": {"title": "Domain-Specific Data Generation Framework for RAG Adaptation", "arxiv": "2510.11217", "github": null, "selection": "separate_training_condition"},
+  "DO_RAG": {"title": "DO-RAG: A Domain-Specific QA Framework Using Knowledge Graph-Enhanced Retrieval-Augmented Generation", "arxiv": "2505.17058", "github": null, "selection": "official_code_not_located"},
+  "CoT_RAG": {"title": "CoT-RAG: Integrating Chain of Thought and Retrieval-Augmented Generation to Enhance Reasoning in Large Language Models", "arxiv": "2504.13534", "github": "hustlfy123/CoT-RAG", "selection": "separate_expert_tree_casebase_condition"},
+  "HyperGraphRAG": {"title": "HyperGraphRAG: Retrieval-Augmented Generation via Hypergraph-Structured Knowledge Representation", "arxiv": "2503.21322", "github": "LHRLAB/HyperGraphRAG", "selection": "candidate"},
+  "T3": {"title": "RAG over Thinking Traces Can Improve Reasoning Tasks", "arxiv": "2605.03344", "github": "Narabzad/t3", "selection": "separate_external_trace_condition"}
+}

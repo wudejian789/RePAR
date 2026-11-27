@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>RePAR · 评测案例</title>
+  <link rel="icon" href="/static/vendor/network.svg">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/product.css">
+  <script type="module" src="/static/app.js"></script>
+</head>
+<body class="evaluation">
+  <header class="site-header product-header">
+    <a class="brand" href="/studio" aria-label="RePAR 知识问答"><span class="brand-icon">R</span><strong>RePAR</strong></a>
+    <nav class="product-nav" aria-label="工作台导航">
+      <a href="/studio">知识问答</a>
+      <a href="/studio/libraries">知识库管理</a>
+      <a href="/" aria-current="page">评测案例</a>
+    </nav>
+  </header>
+  <main>
+    <section class="evaluation-heading">
+      <div><h1>评测案例</h1><p class="subtitle">比较方法表现，回看单题答案、证据和实际调用。</p></div>
+      <nav class="dataset-nav" aria-label="选择数据集"><a id="longbench-link" href="/">LongBench v2</a><a id="math-link" href="/?dataset=math">MATH 2025</a></nav>
+    </section>
+    <div class="evaluation-context"><div><h2 id="dataset-title"></h2><p class="subtitle" id="dataset-summary"></p></div>
+      <div class="evaluation-actions"><button class="button quiet" id="jump-case" type="button" disabled>查看当前题目 ↓</button><button class="button quiet" id="export-csv">导出 CSV</button></div>
+    </div>
+    <div id="global-status" class="status-message" role="status">正在载入已完成的实验结果…</div>
+
+    <section class="comparison-panel" aria-label="逐题比较">
+      <div class="panel comparison-settings">
+      <div class="section-header"><h2>比较设置</h2><button id="reset-filters" class="text-button">清除筛选</button></div>
+      <div class="comparison-controls">
+        <label>X 轴方法<select id="x-method"></select></label>
+        <button class="swap-button" id="swap-methods" aria-label="交换 X 和 Y 轴方法" title="交换 X / Y">⇄</button>
+        <label>Y 轴方法<select id="y-method"></select></label>
+        <label>比较指标<select id="metric"><option value="service_seconds">模型计算时间 · 秒</option><option value="wall_seconds">在线实测时间 · 秒</option><option value="prompt_tokens">累计输入 · tokens</option><option value="completion_tokens">累计输出 · tokens</option><option value="score">答题评分 · 0 / 1</option><option value="evidence_count">最终证据片段数</option></select></label>
+        <label class="check-control"><input type="checkbox" id="log-scale"> 对数坐标</label>
+      </div>
+      <div class="filter-row">
+        <label class="search-field"><span>⌕</span><input type="search" id="search" placeholder="搜索题目、选项或 Case ID" aria-label="搜索题目、选项或 Case ID"></label>
+        <select id="domain" aria-label="筛选子领域"><option value="">全部领域</option></select>
+        <select id="length" aria-label="筛选上下文长度"><option value="">全部长度</option><option value="short">Short</option><option value="medium">Medium</option><option value="long">Long</option></select>
+        <select id="difficulty" aria-label="筛选难度"><option value="">全部难度</option><option value="easy">Easy</option><option value="hard">Hard</option></select>
+        <select id="outcome" aria-label="筛选胜负"><option value="">全部评分组合</option><option value="both">双方正确</option><option value="y">仅 Y 正确</option><option value="x">仅 X 正确</option><option value="neither">双方错误</option></select>
+      </div>
+      </div>
+      <section class="summary-grid" id="summary" aria-label="对比统计"></section>
+      <div class="chart-and-list panel">
+        <div class="chart-area"><header class="chart-heading"><h2>逐题分布</h2><span id="filtered-count" class="muted"></span></header><div id="scatter" class="scatter" aria-label="点击散点选择一道题"></div><div class="chart-legend" id="legend"></div><p class="chart-hint" id="chart-hint"></p></div>
+        <aside class="case-list"><div class="list-heading"><h2>题目索引</h2><span class="list-columns">X / Y 评分</span></div><div id="case-list" class="case-list-content"></div></aside>
+      </div>
+      <details class="timing-note"><summary>评分与计时口径</summary><p id="scoring-note"></p><p>模型计算时间累计全部作答侧调用的预填充与解码，含缓存请求原始成本。在线实测包括索引加载、检索、LLM 与本地处理，排除首次建库。缓存复用会影响在线时间。</p><p id="indexing-note"></p></details>
+    </section>
+
+    <section id="case-section" class="case-section" aria-label="单题复核" tabindex="-1"><div class="empty-state">从题目索引选择一道题来核对答案。</div></section>
+  </main>
+  <div id="tooltip" class="plot-tooltip" role="tooltip" hidden></div>
+  <dialog id="trace-dialog" aria-labelledby="trace-title"><div class="dialog-shell"><header class="dialog-header"><h2 id="trace-title">RePAR 调用轨迹</h2><div class="dialog-actions"><button id="download-trace" class="button quiet">下载 Trace</button><button class="close-button" id="close-trace" aria-label="关闭调用轨迹">×</button></div></header><div id="trace-content" class="dialog-content"></div></div></dialog>
+</body>
+</html>

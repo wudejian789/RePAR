@@ -1,0 +1,112 @@
+{
+  "title": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
+  "arxiv": "2401.18059",
+  "github": "parthsarthi03/raptor",
+  "selection": "candidate",
+  "checked_at_utc": "2026-11-18T13:37:50.844229+00:00",
+  "paper": {
+    "url": "https://arxiv.org/pdf/2401.18059",
+    "sha256": "01319e2e6e6ecfd504ee1bbda41d023f9e060bd3505ab3c161baa1d6d696cf75",
+    "bytes": 2547113
+  },
+  "upstream": {
+    "repository": "https://github.com/parthsarthi03/raptor",
+    "commit": "7da1d48a7e1d7dec61a63c9d9aae84e2dfaa5767",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "source_dir": "third_party/baselines/RaptorRAG/7da1d48a7e1d7dec61a63c9d9aae84e2dfaa5767",
+    "scope": "Source/config/license snapshot, excludes datasets, generated outputs and weights",
+    "files": [
+      {
+        "path": "LICENSE.txt",
+        "sha256": "96134f372fd6a571d669593efdfc5f3a7ecc488b360b6ed425e7347fb278e194",
+        "bytes": 1068
+      },
+      {
+        "path": "README.md",
+        "sha256": "769bcefe1d7254162a99bf6d8fbbff19cd7e1f2115cae9d18dbcd842e8c802c2",
+        "bytes": 6715
+      },
+      {
+        "path": "demo/sample.txt",
+        "sha256": "1d7d81ff27c512e541c2eee89d0d2c9476275a02ee40cc86e0a2fe55fed289d0",
+        "bytes": 14025
+      },
+      {
+        "path": "raptor/EmbeddingModels.py",
+        "sha256": "287683879dad00be56ae84cba687e6eb448a137b2124da0437d5d258b7ca5044",
+        "bytes": 1123
+      },
+      {
+        "path": "raptor/FaissRetriever.py",
+        "sha256": "13b3cb73332a71d72697bad75744b1acf7d67e4760b37f58fc642832546169b2",
+        "bytes": 7232
+      },
+      {
+        "path": "raptor/QAModels.py",
+        "sha256": "ab6e35dff31602dcc3ccefca457f01d3aec8c28784af21783e5e25397b7744d9",
+        "bytes": 6737
+      },
+      {
+        "path": "raptor/RetrievalAugmentation.py",
+        "sha256": "3b599c6dbef4a8c2b25167aab29ece1d953ced4bb3a5f6540c8372ceadf339af",
+        "bytes": 11669
+      },
+      {
+        "path": "raptor/Retrievers.py",
+        "sha256": "0e2e5c1e0409881f1450c9280f2443aee8a9b7864d0cf8489a4bf7ab9163a253",
+        "bytes": 164
+      },
+      {
+        "path": "raptor/SummarizationModels.py",
+        "sha256": "24b0cc706f703cba8e131b9e01171d8896fc531201d440e694fb07f344437d16",
+        "bytes": 2253
+      },
+      {
+        "path": "raptor/__init__.py",
+        "sha256": "e9c21669f490ba4297732e1f65ff92a61579137561a7a5e3a2b2553fcdaa0954",
+        "bytes": 901
+      },
+      {
+        "path": "raptor/cluster_tree_builder.py",
+        "sha256": "99bdb5f0c0c383a1c600f16922ab1336e0bc60fa0647305c6d18e39e6cb49b99",
+        "bytes": 5340
+      },
+      {
+        "path": "raptor/cluster_utils.py",
+        "sha256": "bfe3fa5c5ddf6741b3d1fa1747203d6899c1520aa6d3d167cbab34445de78317",
+        "bytes": 6407
+      },
+      {
+        "path": "raptor/tree_builder.py",
+        "sha256": "644e1fc2e8bdad559ec7e7578de7dbe1b5e0ca17af909e5627dc7aa85d2138e0",
+        "bytes": 13993
+      },
+      {
+        "path": "raptor/tree_retriever.py",
+        "sha256": "e7e7184f4222c735762eabd217d527ec37bafc782c5f0cb3c1a1a9f576f617d4",
+        "bytes": 11265
+      },
+      {
+        "path": "raptor/tree_structures.py",
+        "sha256": "2e5f0514e2d1e16ed044d17b9290f941f687cf4ab27d54b94b80c900d634718e",
+        "bytes": 719
+      },
+      {
+        "path": "raptor/utils.py",
+        "sha256": "ba750c304c3b4763da47092f39daec00b26a4ff1c1a38c65ef86c08432e46044",
+        "bytes": 7092
+      },
+      {
+        "path": "requirements.txt",
+        "sha256": "f67def96a701be7290d05611112c0645638d733128d6a2a932ab2ad3152f0203",
+        "bytes": 175
+      }
+    ]
+  }
+}

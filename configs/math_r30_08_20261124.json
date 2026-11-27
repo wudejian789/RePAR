@@ -1,0 +1,6 @@
+{
+  "experiment_id": "math-r30-08-20261124",
+  "output": "artifacts/math_r30_08_20261124",
+  "agent_config": "configs/repar_v4_r30.json",
+  "temperature_reference": "configs/math_08_temperature_01_20261124.json"
+}

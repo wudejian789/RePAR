@@ -1,0 +1,6 @@
+{
+  "experiment_id": "math-r29-08-20261124",
+  "output": "artifacts/math_r29_08_20261124",
+  "agent_version": "react-v4-r29",
+  "temperature_reference": "configs/math_08_temperature_01_20261124.json"
+}

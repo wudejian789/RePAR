@@ -1,0 +1,158 @@
+{
+  "passed": true,
+  "reference": "artifacts/repar_v5_20261126/seed_42",
+  "run": "artifacts/repar_v5_direct8k_20261127/seed_42",
+  "solver_differences": {
+    "direct_answer_max_tokens": [
+      1024,
+      8192
+    ]
+  },
+  "unchanged_core_source_files": 60,
+  "datasets": {
+    "math": {
+      "questions": 19,
+      "old_score": 40.416666666666664,
+      "new_score": 40.666666666666664,
+      "score_change": 0.25,
+      "old_draft_length": 10,
+      "new_draft_length": 10,
+      "old_final_length": 8,
+      "new_final_length": 7,
+      "old_total_tokens": 698601,
+      "new_total_tokens": 1071281,
+      "token_change_percent": 53.34661702459631,
+      "old_calls": 146,
+      "new_calls": 131,
+      "old_draft_tokens": 16060,
+      "new_draft_tokens": 88385,
+      "cached_calls": 0,
+      "control_repairs": 0,
+      "old_fully_correct": 5,
+      "new_fully_correct": 6,
+      "improved_questions": 3,
+      "declined_questions": 2,
+      "per_question": [
+        {
+          "id": "MATH_2025_NATIONAL_I_Q1",
+          "old_score": 5.0,
+          "new_score": 0.0
+        },
+        {
+          "id": "MATH_2025_NATIONAL_I_Q2",
+          "old_score": 5.0,
+          "new_score": 5.0
+        },
+        {
+          "id": "MATH_2025_NATIONAL_I_Q3",
+          "old_score": 5.0,
+          "new_score": 5.0
+        },
+        {
+          "id": "MATH_2025_NATIONAL_I_Q4",
+          "old_score": 5.0,
+          "new_score": 5.0
+        },
+        {
+          "id": "MATH_2025_NATIONAL_I_Q5",
+          "old_score": 0.0,
+          "new_score": 0.0
+        },
+        {
+          "id": "MATH_2025_NATIONAL_I_Q6",
+          "old_score": 0.0,
+          "new_score": 5.0
+        },
+        {
+          "id": "MATH_2025_NATIONAL_I_Q7",
+          "old_score": 5.0,
+          "new_score": 5.0
+        },
+        {
+          "id": "MATH_2025_NATIONAL_I_Q8",
+          "old_score": 0.0,
+          "new_score": 0.0
+        },
+        {
+          "id": "MATH_2025_NATIONAL_I_Q9",
+          "old_score": 0.0,
+          "new_score": 0.0
+        },
+        {
+          "id": "MATH_2025_NATIONAL_I_Q10",
+          "old_score": 0.0,
+          "new_score": 0.0
+        },
+        {
+          "id": "MATH_2025_NATIONAL_I_Q11",
+          "old_score": 0.0,
+          "new_score": 0.0
+        },
+        {
+          "id": "MATH_2025_NATIONAL_I_Q12",
+          "old_score": 0.0,
+          "new_score": 5.0
+        },
+        {
+          "id": "MATH_2025_NATIONAL_I_Q13",
+          "old_score": 0.0,
+          "new_score": 0.0
+        },
+        {
+          "id": "MATH_2025_NATIONAL_I_Q14",
+          "old_score": 0.0,
+          "new_score": 0.0
+        },
+        {
+          "id": "MATH_2025_NATIONAL_I_Q15",
+          "old_score": 9.75,
+          "new_score": 0.0
+        },
+        {
+          "id": "MATH_2025_NATIONAL_I_Q16",
+          "old_score": 0.0,
+          "new_score": 0.0
+        },
+        {
+          "id": "MATH_2025_NATIONAL_I_Q17",
+          "old_score": 0.0,
+          "new_score": 5.0
+        },
+        {
+          "id": "MATH_2025_NATIONAL_I_Q18",
+          "old_score": 5.666666666666667,
+          "new_score": 5.666666666666667
+        },
+        {
+          "id": "MATH_2025_NATIONAL_I_Q19",
+          "old_score": 0.0,
+          "new_score": 0.0
+        }
+      ]
+    },
+    "longbench": {
+      "questions": 125,
+      "old_score": 33,
+      "new_score": 35,
+      "score_change": 2,
+      "old_draft_length": 6,
+      "new_draft_length": 4,
+      "old_final_length": 0,
+      "new_final_length": 0,
+      "old_total_tokens": 5617643,
+      "new_total_tokens": 5725413,
+      "token_change_percent": 1.9184202342512613,
+      "old_calls": 1231,
+      "new_calls": 1222,
+      "old_draft_tokens": 55930,
+      "new_draft_tokens": 84403,
+      "cached_calls": 0,
+      "control_repairs": 0,
+      "old_accuracy": 0.264,
+      "new_accuracy": 0.28,
+      "gained": 2,
+      "lost": 0,
+      "mcnemar_exact_p": 0.5
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "base_url": "http://127.0.0.1:9090",
+  "model": "Qwen3.8-27B-UD-Q4_K_M",
+  "deployment_id": "qwen38-27b-ud-q4km-9090-b12283-ctx131072-20261119",
+  "context_window": 131072,
+  "seed": 42,
+  "temperature": 0.1,
+  "enable_thinking": false,
+  "chunk_words": 240,
+  "retrieval_top_k": 24,
+  "answer_max_tokens": 4096,
+  "agent_version": "direct"
+}

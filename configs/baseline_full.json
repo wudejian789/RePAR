@@ -1,0 +1,26 @@
+{
+  "version": "baseline-full-qwen08-dual-v1",
+  "dataset": "data/longbench_v2.json",
+  "domain": "Multi-Document QA",
+  "expected_items": 125,
+  "methods": ["RaptorRAG", "HippoRAG2", "HyperGraphRAG"],
+  "model_config": "configs/repar_v2.json",
+  "encoder": "models/all-MiniLM-L6-v2",
+  "endpoints": ["http://127.0.0.1:9092", "http://127.0.0.1:9093"],
+  "deployment_id": "qwen35-08b-q4km-standard-b12500-dual-p8-c524288-v1",
+  "context_per_slot": 65536,
+  "endpoint_slots": 8,
+  "case_workers": 3,
+  "index_workers": 8,
+  "encoder_threads": 2,
+  "gateway_port": 9094,
+  "case_seconds": null,
+  "call_seconds": 600,
+  "transport_attempts": 2,
+  "method_parameters": {
+    "RaptorRAG": {"num_layers": 5, "summary_tokens": 100, "seed": 42, "max_context_tokens": 8000},
+    "HippoRAG2": {"ner_tokens": 2048, "triple_tokens": 4096},
+    "HyperGraphRAG": {"extraction_tokens": 2048, "gleaning": 2}
+  },
+  "notes": "Full 125-item conditions, no pilot length gate or 180-second case cutoff. Preserve model, prompts and token caps; parallelism is execution only. No pilot cache reuse. Record failures; never silently substitute another retriever."
+}

@@ -1,0 +1,76 @@
+# Python and build outputs
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Local credentials, editor state and runtime files
+.env
+.env.*
+!.env.example
+*.local.json
+*.pem
+*.key
+*.log
+*.pid
+*.tmp
+.idea/
+.vscode/
+/other_server_usage.md
+
+# Model weights stay local; retain provenance manifests.
+/models/**
+!/models/**/
+!/models/**/source_manifest.json
+!/models/**/download_manifest.json
+
+# Raw benchmarks and textbooks stay local.
+/data/**
+!/data/**/
+!/data/**/README.md
+!/data/**/LICENSE*
+!/data/repo.json
+!/data/dataset_readme.md
+
+# Runtime output, with a lightweight result allowlist.
+/artifacts/*
+!/artifacts/repar_v5_final_20261127/
+/artifacts/repar_v5_final_20261127/*
+!/artifacts/repar_v5_final_20261127/summary.json
+!/artifacts/repar_v5_final_20261127/summary.csv
+!/artifacts/repar_v5_final_20261127/audit_summary.json
+!/artifacts/repar_v5_final_20261127/summary_with_27b.json
+!/artifacts/repar_v5_final_20261127/summary_with_27b.csv
+!/artifacts/repar_v5_final_20261127/audit_summary_with_27b.json
+!/artifacts/repar_v5_direct8k_20261127/
+/artifacts/repar_v5_direct8k_20261127/*
+!/artifacts/repar_v5_direct8k_20261127/seed_42/
+/artifacts/repar_v5_direct8k_20261127/seed_42/*
+!/artifacts/repar_v5_direct8k_20261127/seed_42/summary.json
+!/artifacts/repar_v5_direct8k_20261127/seed_42/protocol.json
+!/artifacts/repar_v5_direct8k_20261127/seed_42/audit_v5.json
+!/artifacts/repar_v5_direct8k_20261127/seed_42/comparison_direct1k.json
+!/artifacts/repar_v5_27b_direct8k_20261127/
+/artifacts/repar_v5_27b_direct8k_20261127/*
+!/artifacts/repar_v5_27b_direct8k_20261127/seed_42/
+/artifacts/repar_v5_27b_direct8k_20261127/seed_42/*
+!/artifacts/repar_v5_27b_direct8k_20261127/seed_42/summary.json
+!/artifacts/repar_v5_27b_direct8k_20261127/seed_42/protocol.json
+!/artifacts/repar_v5_27b_direct8k_20261127/seed_42/audit_v5.json
+
+# Generated UI exports and local tooling
+/webserver/data/
+/webserver/screenshots/
+/webserver/validation.json
+/tools/
+
+# Full paper copies and upstream snapshots without redistribution licenses
+/baselines/**/paper.pdf
+/third_party/papers/*.txt
+/third_party/paper.html
+/third_party/baselines/CoT_RAG/
+/third_party/baselines/T3/

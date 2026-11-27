@@ -1,0 +1,20 @@
+{
+  "base_url": "http://127.0.0.1:9090",
+  "model": "Qwen3.8-27B-UD-Q4_K_M",
+  "context_window": 131072,
+  "direct_input_budget": 130560,
+  "seed": 42,
+  "temperature": 0.1,
+  "enable_thinking": false,
+  "answer_grammar": "root ::= \"The correct answer is (\" [ABCD] \")\"",
+  "answer_max_tokens": 128,
+  "react_max_tokens": 768,
+  "react_max_steps": 5,
+  "evidence_word_budget": 10000,
+  "chunk_words": 240,
+  "tree_fanout": 4,
+  "retrieval_top_k": 24,
+  "graph_neighbors": 6,
+  "index_version": "ordered-extractive-v1",
+  "notes": "Frozen before benchmark scoring. No training or answer-dependent tuning. Parameters refer to query operators, not learned model weights."
+}

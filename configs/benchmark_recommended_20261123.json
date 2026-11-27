@@ -1,0 +1,25 @@
+{
+  "experiment_id": "recommended-generation-20261123",
+  "output": "artifacts/benchmark_recommended_20261123",
+  "references": {
+    "08": "https://www.modelscope.cn/models/unsloth/Qwen3.5-0.8B-GGUF",
+    "27": "https://www.modelscope.cn/models/unsloth/Qwen3.8-27B-GGUF",
+    "longbench": "third_party/pred.py"
+  },
+  "sampling": {
+    "08": {"temperature": 1.0, "top_p": 1.0, "top_k": 20, "min_p": 0.0, "presence_penalty": 2.0, "repeat_penalty": 1.0},
+    "27": {"temperature": 0.7, "top_p": 0.8, "top_k": 20, "min_p": 0.0, "presence_penalty": 1.5, "repeat_penalty": 1.0}
+  },
+  "conditions": {
+    "08/math": ["direct", "bm25", "raptor", "repar"],
+    "08/longbench": ["direct", "bm25", "raptor", "hipporag2", "hypergraphrag", "repar"],
+    "27/math": ["direct", "bm25", "repar"],
+    "27/longbench": ["direct", "bm25", "repar"]
+  },
+  "longbench": {"temperature": 0.1, "max_tokens": 128, "grammar": "root ::= \"The correct answer is (\" [ABCD] \")\""},
+  "math_answer_max_tokens": 4096,
+  "chinese_index": "artifacts/repar_v4_20261123_zh_index/index.pkl",
+  "longbench_08_parallel_endpoints": ["http://127.0.0.1:9092", "http://127.0.0.1:9093"],
+  "longbench_08_workers_per_endpoint": 5,
+  "workers_27": 2
+}

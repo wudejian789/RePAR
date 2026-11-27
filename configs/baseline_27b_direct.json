@@ -1,0 +1,49 @@
+{
+  "experiment_id": "baseline-direct-27b-20261119",
+  "output": "artifacts/baselines_27b_20261119/direct",
+  "solver_config": "configs/direct_27b.json",
+  "math_questions": "data/MATH_2025_NATIONAL_I/MATH_2025_NATIONAL_I_QA.jsonl",
+  "math_textbook": "data/MATH_2025_NATIONAL_I/textbook_chunks.jsonl",
+  "math_parent": "artifacts/math_2025_national_i_v5",
+  "longbench_data": "data/longbench_v2.json",
+  "longbench_parent": "artifacts/experiment/direct.jsonl",
+  "longbench_final_max_tokens": 128,
+  "longbench_answer_grammar": "root ::= \"The correct answer is (\" [ABCD] \")\"",
+  "judge": {
+    "base_url": "http://127.0.0.1:9090",
+    "model": "Qwen3.8-27B-UD-Q4_K_M",
+    "deployment_id": "math2025-judge-qwen38-27b-ud-q4km-9090-20261118",
+    "temperature": 0,
+    "seed": 20261118,
+    "enable_thinking": false,
+    "max_tokens": 3072,
+    "replicate_seeds": [
+      20261118,
+      20261119,
+      20261120
+    ]
+  },
+  "source_policy": "No data cleaning, rewriting, filtering, or repartitioning; reuse existing exact context and v2 tree/entity indexes",
+  "exposure": "Both datasets and previous 0.8B results are known. Full paired backbone comparison; same unchanged workflow per version, no per-question rules or score-driven changes.",
+  "selection": "all19 math and all125 Multi-Document QA; report every outcome, no question-level routing or favorable subset selection",
+  "reference_policy": "New complete direct/BM25 measurements; reuse completed27Bv2/v3 and historical0.8B results explicitly, no request or prediction imports",
+  "variant": "baseline_direct",
+  "comparison_boundary": {
+    "data": "Exact original stitched textbook and LongBench contexts; no cleanup",
+    "direct": "Original full-context baseline with fixed head/tail overflow truncation; math preserves question and uses same retained context for all19",
+    "bm25": "Original chunk_words240 and top_k24; source-ordered evidence, no tree or graph",
+    "final": "Same MATH freeform4096 and LongBench grammar128 as27Bv2/v3",
+    "model": "Same9090 model/settings; actual ctx131072",
+    "judge": "Same anonymous double/triple rubric; solver/judge same27B model limitation"
+  },
+  "method_display": "direct / Qwen3.8-27B",
+  "additional_snapshot_files": [
+    "scripts/run_backbone_comparison.py",
+    "scripts/finalize_27b_baselines.py",
+    "configs/baselines_27b_comparison.json",
+    "tests/test_27b_baselines.py",
+    "third_party/prompts/0shot.txt"
+  ],
+  "math_direct_input_budget": 126848,
+  "longbench_direct_input_budget": 130560
+}

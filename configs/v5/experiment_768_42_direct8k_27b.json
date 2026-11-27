@@ -1,0 +1,66 @@
+{
+  "math_questions": "data/MATH_2025_NATIONAL_I/MATH_2025_NATIONAL_I_QA.jsonl",
+  "math_textbook": "data/MATH_2025_NATIONAL_I/textbook_chunks.jsonl",
+  "math_parent": "artifacts/math_2025_national_i_v5",
+  "longbench_data": "data/longbench_v2.json",
+  "longbench_parent": "artifacts/experiment_v2/repar.jsonl",
+  "longbench_final_max_tokens": 128,
+  "longbench_answer_grammar": "root ::= \"The correct answer is (\" [ABCD] \")\"",
+  "judge": {
+    "base_url": "http://127.0.0.1:9090",
+    "model": "Qwen3.8-27B-UD-Q4_K_M",
+    "deployment_id": "math2025-judge-qwen38-27b-ud-q4km-9090-20261118",
+    "temperature": 0,
+    "seed": 20261118,
+    "enable_thinking": false,
+    "max_tokens": 3072,
+    "replicate_seeds": [
+      20261118,
+      20261119,
+      20261120
+    ]
+  },
+  "experiment_id": "repar-v5-27b-768-direct8k-seed-42-20261127",
+  "output": "artifacts/repar_v5_27b_direct8k_20261127/seed_42",
+  "dense_index_directory": "artifacts/repar_v4_r60_20261126/tokens_768/indexes",
+  "variant": "prior_answer_v5",
+  "method_display": "v5 (27B, 768-token index, direct answer 8192 tokens, seed 42)",
+  "source_policy": "Original text partitioned by EmbeddingGemma, spaCy entity graph",
+  "exposure": "Development comparison on previously evaluated benchmarks.",
+  "report_filename": "2026-11-27_1746_RePARv5_Direct8K_27B_seed42.md",
+  "additional_snapshot_files": [
+    "scripts/run_repar_v5.py",
+    "scripts/run_r60.py",
+    "scripts/research_kb_v5.py",
+    "scripts/audit_repar_v5.py",
+    "scripts/run_repar_v5_27b.py"
+  ],
+  "immutable_references": [
+    "artifacts/repar_v4_r27_20261120/protocol.json",
+    "models/EmbeddingGemma-300M/source_manifest.json",
+    "artifacts/repar_v4_r60_20261126/tokens_768/indexes/*.pkl",
+    "artifacts/repar_v4_r60_20261126/tokens_768/indexes.json",
+    "artifacts/repar_v4_r61_20261126/tokens_768/seed_42/protocol.json",
+    "artifacts/repar_v5_20261126/seed_42/protocol.json",
+    "artifacts/repar_v4_r27_27b_20261120/protocol.json",
+    "artifacts/repar_v5_direct8k_20261127/seed_42/protocol.json",
+    "configs/benchmark_recommended_20261123.json"
+  ],
+  "solver_config": "configs/v5/solver_768_42_direct8k_27b.json",
+  "sampling_by_dataset": {
+    "math": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 1.5,
+      "repeat_penalty": 1.0
+    },
+    "longbench": {
+      "temperature": 0.1
+    }
+  },
+  "sampling_source": "configs/benchmark_recommended_20261123.json",
+  "backbone_reference": "artifacts/repar_v4_r27_27b_20261120",
+  "workflow_reference": "artifacts/repar_v5_direct8k_20261127/seed_42"
+}

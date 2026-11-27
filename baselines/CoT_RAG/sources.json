@@ -1,0 +1,107 @@
+{
+  "title": "CoT-RAG: Integrating Chain of Thought and Retrieval-Augmented Generation to Enhance Reasoning in Large Language Models",
+  "arxiv": "2504.13534",
+  "github": "hustlfy123/CoT-RAG",
+  "selection": "separate_expert_tree_casebase_condition",
+  "checked_at_utc": "2026-11-18T13:58:19.818746+00:00",
+  "paper": {
+    "url": "https://arxiv.org/pdf/2504.13534",
+    "sha256": "db169601bd748029d7bc6f954b1071c883affe513246978807f9ba10e3fb1c30",
+    "bytes": 2445443
+  },
+  "upstream": {
+    "repository": "https://github.com/hustlfy123/CoT-RAG",
+    "commit": "1bbfa5e634e0a23e95f7d07acfda3d7a43668194",
+    "license": null,
+    "source_dir": "third_party/baselines/CoT_RAG/1bbfa5e634e0a23e95f7d07acfda3d7a43668194",
+    "scope": "Official pinned archive; source/config/license only, datasets and weights excluded",
+    "files": [
+      {
+        "path": "invoke_LLM/ERNIE.py",
+        "bytes": 849,
+        "sha256": "56f02788f4c386253914802c6cc206f3a240566a4168edbe05320fbdff3e41c6"
+      },
+      {
+        "path": "invoke_LLM/GLM-4-Flash.py",
+        "bytes": 397,
+        "sha256": "efbf36a78dbd71e64c9c14903fd05ab5f2acae25ce5aa58961d0dee7f7c4ce10"
+      },
+      {
+        "path": "invoke_LLM/gpt-4o-mini.py",
+        "bytes": 357,
+        "sha256": "b09fd17a9e773f71cbb3e1c219f481398c78bef434a491ba0dda580c333139be"
+      },
+      {
+        "path": "method/CoT-RAG/execution_engine.py",
+        "bytes": 851,
+        "sha256": "e01139191110db682d00c4ab58136c6e25d9f314a6c53d8336323a82f08e4c1c"
+      },
+      {
+        "path": "method/CoT-RAG/faiss_index.py",
+        "bytes": 6135,
+        "sha256": "9e05934b80304cd9ee5652c39a7d031f59e1f1d46743cb1ece0c67b4cf1a5817"
+      },
+      {
+        "path": "method/CoT-RAG/knowledge_graph.py",
+        "bytes": 2005,
+        "sha256": "0388683d12bf3597d12fa7af7926e95d7220b3bc00376645c2d9a36eec5744c7"
+      },
+      {
+        "path": "method/CoT-RAG/llm_adapter.py",
+        "bytes": 5846,
+        "sha256": "b686c22dffb9a74849efab41167fd601ce62563a36095f7ffb52d4ac84227784"
+      },
+      {
+        "path": "method/CoT-RAG/main.py",
+        "bytes": 1236,
+        "sha256": "6868b3ca593741be92cd9f8139c11eafaa631ca7bf9a72584723643292a90c79"
+      },
+      {
+        "path": "method/CoT-RAG/rag_processor.py",
+        "bytes": 1854,
+        "sha256": "c4958b55b06c42a323cfcc81bb34b404312dd593969ce1b23f8dda89781d206e"
+      },
+      {
+        "path": "method/baselines/CoT_Reasoning/Auto-CoT/api.py",
+        "bytes": 3564,
+        "sha256": "9269b0b97f68fa2eb04e7162596b4c16e5897d7fcc06cb876f9350fd9abe19b2"
+      },
+      {
+        "path": "method/baselines/CoT_Reasoning/Auto-CoT/run_demo.py",
+        "bytes": 6607,
+        "sha256": "87b41e09f9b2efd52d72cb8b10ca22d4eafe4b389fa3eb85b51e4c8b2b467e64"
+      },
+      {
+        "path": "method/baselines/CoT_Reasoning/Auto-CoT/run_inference.py",
+        "bytes": 9037,
+        "sha256": "1b20db7041d0cac3fc0c7227b8787118c49a1244ee8decf91fd2318ffcf8a988"
+      },
+      {
+        "path": "method/baselines/CoT_Reasoning/Auto-CoT/utils.py",
+        "bytes": 13339,
+        "sha256": "eb846e42221d4528ec11e4467e62c0c045f8091f02a8667093b381d5c8a1387a"
+      },
+      {
+        "path": "method/baselines/CoT_Reasoning/CoT/prompt.txt",
+        "bytes": 357,
+        "sha256": "ab102d238b670d18f7c0a2b27820c8aab4d3a150e6cfeed9f3d710c3fec4098b"
+      },
+      {
+        "path": "method/baselines/CoT_Reasoning/PS/prompt.txt",
+        "bytes": 299,
+        "sha256": "a21a15ffc7efba3a2cd71596813cb990abc5204fbf86e874713d3e60cf8473ea"
+      },
+      {
+        "path": "method/baselines/CoT_Reasoning/QDMRPS/prompt.txt",
+        "bytes": 2339,
+        "sha256": "e0f710a284ad6c887eba111676238b7d1ea6153b73d66ad1db8f9a7a33da7df1"
+      },
+      {
+        "path": "method/baselines/CoT_Reasoning/Zero-shot-CoT/prompt.txt",
+        "bytes": 172,
+        "sha256": "a8434caf1878e2e1cd36a973540c1378cd1b92617ae1fed1e64e995c468ee268"
+      }
+    ]
+  },
+  "resolved_upstream_error": "https://api.github.com/repos/hustlfy123/CoT-RAG/git/trees/1bbfa5e634e0a23e95f7d07acfda3d7a43668194?recursive=1: 403 Client Error: rate limit exceeded for url: https://api.github.com/repos/hustlfy123/CoT-RAG/git/trees/1bbfa5e634e0a23e95f7d07acfda3d7a43668194?recursive=1"
+}

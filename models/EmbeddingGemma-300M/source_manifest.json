@@ -1,0 +1,78 @@
+{
+  "model": "google/embeddinggemma-300m",
+  "source": "https://www.modelscope.cn/models/google/embeddinggemma-300m",
+  "files": {
+    "1_Pooling/config.json": {
+      "revision": "a23bd8b40306373d63f858d0bdf4a8ac708c0bda",
+      "sha256": "35bbd47d7fdf1e378db6130bcc668b09d1aa67a7bbf7c8f89a9c71f4cc8ebcc6"
+    },
+    "2_Dense/config.json": {
+      "revision": "a23bd8b40306373d63f858d0bdf4a8ac708c0bda",
+      "sha256": "0661e5e0b67b8f8408ab31ab5d073a78972fc1dc24a49992a64796557e4f9e53"
+    },
+    "2_Dense/model.safetensors": {
+      "revision": "e7997e6583807d0f517d5e20e44cd382f494bc4f",
+      "sha256": "c327f2acb00149676ade24a75e11eb6ebbd367f9ee050267ba56829d2979f702"
+    },
+    "3_Dense/config.json": {
+      "revision": "a23bd8b40306373d63f858d0bdf4a8ac708c0bda",
+      "sha256": "8c4575c49353d63fb907878856ba94384635c3b2711fd5b7439e7f71888c66fc"
+    },
+    "3_Dense/model.safetensors": {
+      "revision": "e7997e6583807d0f517d5e20e44cd382f494bc4f",
+      "sha256": "ffb6cc5162e11e2ce6bc2367e121ee3bbbc4e82e1ee26826bd7573d4948d81b8"
+    },
+    "README.md": {
+      "revision": "480ee9b0e4761c35cf4f8295236b7b01b256b8cf",
+      "sha256": "e53702f564878ea87085742fe3f485872bef81317086e9ffe37125a81809772a"
+    },
+    "added_tokens.json": {
+      "revision": "a23bd8b40306373d63f858d0bdf4a8ac708c0bda",
+      "sha256": "50b2f405ba56a26d4913fd772089992252d7f942123cc0a034d96424221ba946"
+    },
+    "config.json": {
+      "revision": "a23bd8b40306373d63f858d0bdf4a8ac708c0bda",
+      "sha256": "8f863f76e2d9c710cc833dc92efa898c9adfd41031c786507cc6b0e49c2e3e68"
+    },
+    "config_sentence_transformers.json": {
+      "revision": "a23bd8b40306373d63f858d0bdf4a8ac708c0bda",
+      "sha256": "8eadac15526f83d8950aa8d962a7f4f6e3d678bea71689960194561f33a5f64f"
+    },
+    "configuration.json": {
+      "revision": "a23bd8b40306373d63f858d0bdf4a8ac708c0bda",
+      "sha256": "007c616ed9187f4f3d6096ed2d55cece33c3f48866dbd7bc6afefcb9645a37c1"
+    },
+    "generation_config.json": {
+      "revision": "a23bd8b40306373d63f858d0bdf4a8ac708c0bda",
+      "sha256": "1fb1efd221c1ca88a736d1b36cb47d754c177677e222acb3b1e5424c5d664870"
+    },
+    "model.safetensors": {
+      "revision": "e7997e6583807d0f517d5e20e44cd382f494bc4f",
+      "sha256": "cbf5a78393b6a033e0b8a63a57549964f7ed5c6fbeb4ba0694214f36123f2fd2"
+    },
+    "modules.json": {
+      "revision": "a23bd8b40306373d63f858d0bdf4a8ac708c0bda",
+      "sha256": "5b5649645fb756dad1a8e2efe7872d3bb32bc00b93c95f276dd17f474eedccdc"
+    },
+    "sentence_bert_config.json": {
+      "revision": "a23bd8b40306373d63f858d0bdf4a8ac708c0bda",
+      "sha256": "5ea26221ce733ace29a3897360e7c6ac8816b2ca0f7306657d69e594fece7325"
+    },
+    "special_tokens_map.json": {
+      "revision": "a23bd8b40306373d63f858d0bdf4a8ac708c0bda",
+      "sha256": "2f7b0adf4fb469770bb1490e3e35df87b1dc578246c5e7e6fc76ecf33213a397"
+    },
+    "tokenizer.json": {
+      "revision": "a23bd8b40306373d63f858d0bdf4a8ac708c0bda",
+      "sha256": "6852f8d561078cc0cebe70ca03c5bfdd0d60a45f9d2e0e1e4cc05b68e9ec329e"
+    },
+    "tokenizer.model": {
+      "revision": "e7997e6583807d0f517d5e20e44cd382f494bc4f",
+      "sha256": "1299c11d7cf632ef3b4e11937501358ada021bbdf7c47638d13c0ee982f2e79c"
+    },
+    "tokenizer_config.json": {
+      "revision": "a23bd8b40306373d63f858d0bdf4a8ac708c0bda",
+      "sha256": "9076840490613047bc9115963ee96b7702018b0d26ba644240bf856efda93118"
+    }
+  }
+}

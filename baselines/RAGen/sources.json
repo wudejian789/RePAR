@@ -1,0 +1,12 @@
+{
+  "title": "Domain-Specific Data Generation Framework for RAG Adaptation",
+  "arxiv": "2510.11217",
+  "github": null,
+  "selection": "separate_training_condition",
+  "checked_at_utc": "2026-11-18T13:38:15.837847+00:00",
+  "paper": {
+    "url": "https://arxiv.org/pdf/2510.11217",
+    "sha256": "488ea4347971e5eeece07911c692e784002eb57a6b4d3dd1ac892ea501333cef",
+    "bytes": 562589
+  }
+}

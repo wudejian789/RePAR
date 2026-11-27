@@ -1,0 +1,282 @@
+{
+  "title": "HyperGraphRAG: Retrieval-Augmented Generation via Hypergraph-Structured Knowledge Representation",
+  "arxiv": "2503.21322",
+  "github": "LHRLAB/HyperGraphRAG",
+  "selection": "candidate",
+  "checked_at_utc": "2026-11-18T13:38:16.829212+00:00",
+  "paper": {
+    "url": "https://arxiv.org/pdf/2503.21322",
+    "sha256": "b3cc98c44e998661fc8f419a292997bd508c30ac28a499d41af842b22d1f4e3f",
+    "bytes": 6428009
+  },
+  "upstream": {
+    "repository": "https://github.com/LHRLAB/HyperGraphRAG",
+    "commit": "e01d2f2a5f3d1e80415b933c10fa7d14587cf811",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "source_dir": "third_party/baselines/HyperGraphRAG/e01d2f2a5f3d1e80415b933c10fa7d14587cf811",
+    "scope": "Source/config/license snapshot, excludes datasets, generated outputs and weights",
+    "files": [
+      {
+        "path": "LICENSE",
+        "sha256": "b54ba7ea027e607f865b42c7d617a4cbe03344e2a7e8f64b4fab3e8bf58a339e",
+        "bytes": 1067
+      },
+      {
+        "path": "README.md",
+        "sha256": "16907db44b8c1eca76bee50411302a117803f2d003b32a95c2754523138dd5bc",
+        "bytes": 2769
+      },
+      {
+        "path": "evaluation/README.md",
+        "sha256": "d02bbd471726d86afd26868e78d983bcd99a71c30c4cafc9c20fc9f754c9770c",
+        "bytes": 2949
+      },
+      {
+        "path": "evaluation/eval.py",
+        "sha256": "f5a5416f9a912da20dd6aa36eafa8c541218d7be9c56c0bc1227c6bbce311c7a",
+        "bytes": 4285
+      },
+      {
+        "path": "evaluation/eval_g.py",
+        "sha256": "15e7ebe0ca11c2a5578c3d20c3b16fd9aac0c2313fbc6cfb4bbd3f57e86a3c88",
+        "bytes": 6710
+      },
+      {
+        "path": "evaluation/eval_r.py",
+        "sha256": "10c79cb977f5f1bbd29cc9c7b2e31b2a6baca5946286e6095a0708376c79afcf",
+        "bytes": 2687
+      },
+      {
+        "path": "evaluation/get_generation.py",
+        "sha256": "a2b8c4218226974e63c67ad025ebbf25aa2c5e36d5738e8372f63213001a7151",
+        "bytes": 2420
+      },
+      {
+        "path": "evaluation/get_score.py",
+        "sha256": "8d7b5b87c243d8f477e476f2674b9a3f1a6bc9ff2f9a79527511b1abbb97bd38",
+        "bytes": 3897
+      },
+      {
+        "path": "evaluation/hypergraphrag/__init__.py",
+        "sha256": "42db2a734b8c565ead8ea7d84f1422226dba430674d2e28e124b8656c8a02103",
+        "bytes": 183
+      },
+      {
+        "path": "evaluation/hypergraphrag/base.py",
+        "sha256": "66c868bca6556d5742a44bdbf403da9f7c7a5cae9ed027c5a57b62fe98ecc01d",
+        "bytes": 3914
+      },
+      {
+        "path": "evaluation/hypergraphrag/hypergraphrag.py",
+        "sha256": "f0ba71a747490c0ac20c730812664edd5430a2cc58484f254df0b110b6bb67ae",
+        "bytes": 20857
+      },
+      {
+        "path": "evaluation/hypergraphrag/kg/__init__.py",
+        "sha256": "fbd3eff0946b1cd66087d6a8ced0d073e050b053fa70e082af6769923565a202",
+        "bytes": 43
+      },
+      {
+        "path": "evaluation/hypergraphrag/kg/chroma_impl.py",
+        "sha256": "b9aaf16bda1a7155c1ccc42e41439be3c0ff9edb81dd4e48f09a8be4a782774d",
+        "bytes": 6975
+      },
+      {
+        "path": "evaluation/hypergraphrag/kg/milvus_impl.py",
+        "sha256": "a1d491c90faf98ee9e0c6e0747c04f841aa0827a0169b2be0811f366f768a6d8",
+        "bytes": 3145
+      },
+      {
+        "path": "evaluation/hypergraphrag/kg/mongo_impl.py",
+        "sha256": "c37b8ba5582216c3c3986eabe7bdc02e9b33f99e2f9de941523041323517c5bf",
+        "bytes": 1656
+      },
+      {
+        "path": "evaluation/hypergraphrag/kg/neo4j_impl.py",
+        "sha256": "8c26260a07953da3387592b63b8049eb302a31845b75fae7ab27cff55f688078",
+        "bytes": 10618
+      },
+      {
+        "path": "evaluation/hypergraphrag/kg/oracle_impl.py",
+        "sha256": "e44e57dfaa692f7583eda2dd6033006b4ec91fe30b7fc0493d29dc8666405ced",
+        "bytes": 32064
+      },
+      {
+        "path": "evaluation/hypergraphrag/kg/tidb_impl.py",
+        "sha256": "fa9dd0fceab7e699facbb4c13f536267cff7acff751a9131d873203e7f75feb8",
+        "bytes": 18021
+      },
+      {
+        "path": "evaluation/hypergraphrag/llm.py",
+        "sha256": "9ccd21a0bf4bf59bc2f5d92baec764b86d5d2fa8d485e45d94f585715adb3bfa",
+        "bytes": 37812
+      },
+      {
+        "path": "evaluation/hypergraphrag/operate.py",
+        "sha256": "5ec591946dc7949c02e5466f406e73046486e6d47344e3ff997fcf53c4212f3c",
+        "bytes": 38119
+      },
+      {
+        "path": "evaluation/hypergraphrag/prompt.py",
+        "sha256": "2730b18d849641d9dedafad2374034bd5ed90d403402a1991ea0596e869b085e",
+        "bytes": 28929
+      },
+      {
+        "path": "evaluation/hypergraphrag/storage.py",
+        "sha256": "42c270938b33169cbacb85415a43dc32e0e3cf459e4485b5f09ff11fce5e4669",
+        "bytes": 11293
+      },
+      {
+        "path": "evaluation/hypergraphrag/utils.py",
+        "sha256": "a0f09d1562b218fb4040e8089cc648e050d280b50f716f2edc3f41d4b37bad21",
+        "bytes": 17944
+      },
+      {
+        "path": "evaluation/script_hypergraphrag.py",
+        "sha256": "44d26d04347022658e88b7baab689ef27ac958715431cd8d6cb166c75d4722d3",
+        "bytes": 1335
+      },
+      {
+        "path": "evaluation/script_insert.py",
+        "sha256": "2d6676a0e40ec7587c7fc93eab824cc46b58ad3c2dd4fac5765c9600b597bdfc",
+        "bytes": 1084
+      },
+      {
+        "path": "evaluation/script_naivegeneration.py",
+        "sha256": "fa36212831d0bb7f9059c0c96babcab1155b9041b24e849cf5a174406db9d89f",
+        "bytes": 926
+      },
+      {
+        "path": "evaluation/script_standardrag.py",
+        "sha256": "32afb81ed2489e5cbfc723004e7c6d69467d6652a738a92dfa0f38a6e8b5a11c",
+        "bytes": 985
+      },
+      {
+        "path": "evaluation/see_score.py",
+        "sha256": "5bc3791d56ee04ce9b1913af192b0a464b3e5d1d216a5485b466502d669cfa9a",
+        "bytes": 1628
+      },
+      {
+        "path": "evaluation/simcse/__init__.py",
+        "sha256": "2097983559a56e9c331220d4d068b876eef3879a0186562f4ae067767991f116",
+        "bytes": 25
+      },
+      {
+        "path": "evaluation/simcse/models.py",
+        "sha256": "4f415ed61aa103eeae95118c1de44d964a94d83cb70b7adf5d743ba4420c67ce",
+        "bytes": 13807
+      },
+      {
+        "path": "evaluation/simcse/tool.py",
+        "sha256": "bbf459a223a30e0e23781631999b960a16265058dfd05b5d5acff480be16b261",
+        "bytes": 12074
+      },
+      {
+        "path": "evaluation/simcse/trainers.py",
+        "sha256": "9f66dae69dadc747f7b92ba32a83af488c32d995105008ca57288ea1c6e28865",
+        "bytes": 25360
+      },
+      {
+        "path": "example_contexts.json",
+        "sha256": "66fdc5362aa44e06ce418678a7f275da5dc621a088d4866228f0299942f1ef6f",
+        "bytes": 14439
+      },
+      {
+        "path": "hypergraphrag/__init__.py",
+        "sha256": "42db2a734b8c565ead8ea7d84f1422226dba430674d2e28e124b8656c8a02103",
+        "bytes": 183
+      },
+      {
+        "path": "hypergraphrag/base.py",
+        "sha256": "66c868bca6556d5742a44bdbf403da9f7c7a5cae9ed027c5a57b62fe98ecc01d",
+        "bytes": 3914
+      },
+      {
+        "path": "hypergraphrag/hypergraphrag.py",
+        "sha256": "2b1c49dd201232706705526dfe16d55a451b7b8a63837aea8e9978a6b56cfc79",
+        "bytes": 20839
+      },
+      {
+        "path": "hypergraphrag/kg/__init__.py",
+        "sha256": "fbd3eff0946b1cd66087d6a8ced0d073e050b053fa70e082af6769923565a202",
+        "bytes": 43
+      },
+      {
+        "path": "hypergraphrag/kg/chroma_impl.py",
+        "sha256": "b9aaf16bda1a7155c1ccc42e41439be3c0ff9edb81dd4e48f09a8be4a782774d",
+        "bytes": 6975
+      },
+      {
+        "path": "hypergraphrag/kg/milvus_impl.py",
+        "sha256": "a1d491c90faf98ee9e0c6e0747c04f841aa0827a0169b2be0811f366f768a6d8",
+        "bytes": 3145
+      },
+      {
+        "path": "hypergraphrag/kg/mongo_impl.py",
+        "sha256": "c37b8ba5582216c3c3986eabe7bdc02e9b33f99e2f9de941523041323517c5bf",
+        "bytes": 1656
+      },
+      {
+        "path": "hypergraphrag/kg/neo4j_impl.py",
+        "sha256": "8c26260a07953da3387592b63b8049eb302a31845b75fae7ab27cff55f688078",
+        "bytes": 10618
+      },
+      {
+        "path": "hypergraphrag/kg/oracle_impl.py",
+        "sha256": "e44e57dfaa692f7583eda2dd6033006b4ec91fe30b7fc0493d29dc8666405ced",
+        "bytes": 32064
+      },
+      {
+        "path": "hypergraphrag/kg/tidb_impl.py",
+        "sha256": "fa9dd0fceab7e699facbb4c13f536267cff7acff751a9131d873203e7f75feb8",
+        "bytes": 18021
+      },
+      {
+        "path": "hypergraphrag/llm.py",
+        "sha256": "5ed7e61d3d8695410000b6bd24facee90e727c6ffe6e6cb4adef47a26e75c25b",
+        "bytes": 37768
+      },
+      {
+        "path": "hypergraphrag/operate.py",
+        "sha256": "1302a1599fc3b98b9c1bbcbccf9553a093a048985fb36855c3d5e0a4a3da4160",
+        "bytes": 38126
+      },
+      {
+        "path": "hypergraphrag/prompt.py",
+        "sha256": "2730b18d849641d9dedafad2374034bd5ed90d403402a1991ea0596e869b085e",
+        "bytes": 28929
+      },
+      {
+        "path": "hypergraphrag/storage.py",
+        "sha256": "42c270938b33169cbacb85415a43dc32e0e3cf459e4485b5f09ff11fce5e4669",
+        "bytes": 11293
+      },
+      {
+        "path": "hypergraphrag/utils.py",
+        "sha256": "a0f09d1562b218fb4040e8089cc648e050d280b50f716f2edc3f41d4b37bad21",
+        "bytes": 17944
+      },
+      {
+        "path": "requirements.txt",
+        "sha256": "aa23b7af2655ddd9df037520df2423a688f0b1242c3fa085f3554c6421adf0d3",
+        "bytes": 268
+      },
+      {
+        "path": "script_construct.py",
+        "sha256": "523aed466ccf9dd7c68fc6bdd56d94210701a577a4ad2a8f4eb0e8c73fd48d90",
+        "bytes": 285
+      },
+      {
+        "path": "script_query.py",
+        "sha256": "e76e7e8b1ff66c7dece2cbc618eae07b6f410416301db35ced42e75667335cc4",
+        "bytes": 514
+      }
+    ]
+  }
+}

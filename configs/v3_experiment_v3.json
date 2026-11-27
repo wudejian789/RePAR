@@ -1,0 +1,32 @@
+{
+  "experiment_id": "repar-v3-general-20261119-v3",
+  "output": "artifacts/repar_v3_20261119_v3",
+  "solver_config": "configs/repar_v3.json",
+  "math_questions": "data/MATH_2025_NATIONAL_I/MATH_2025_NATIONAL_I_QA.jsonl",
+  "math_textbook": "data/MATH_2025_NATIONAL_I/textbook_chunks.jsonl",
+  "math_parent": "artifacts/math_2025_national_i_v5",
+  "longbench_data": "data/longbench_v2.json",
+  "longbench_parent": "artifacts/experiment_v2/repar.jsonl",
+  "longbench_final_max_tokens": 128,
+  "longbench_answer_grammar": "root ::= \"The correct answer is (\" [ABCD] \")\"",
+  "source_required_for_document_tasks": true,
+  "grounding_contract": "Document-dependent tasks require observed source provenance; self-contained/reference tasks may derive from user facts. Generic core also exposes this through --source-required, with abstention allowed; no fixed tool sequence or minimum action count.",
+  "judge": {
+    "base_url": "http://127.0.0.1:9090",
+    "model": "Qwen3.8-27B-UD-Q4_K_M",
+    "deployment_id": "math2025-judge-qwen38-27b-ud-q4km-9090-20261118",
+    "temperature": 0,
+    "seed": 20261118,
+    "enable_thinking": false,
+    "max_tokens": 3072,
+    "replicate_seeds": [
+      20261118,
+      20261119,
+      20261120
+    ]
+  },
+  "source_policy": "No data cleaning, rewriting, filtering, or repartitioning; reuse existing exact context and v2 tree/entity indexes",
+  "exposure": "Both datasets and prior v3 conditions are known. General output failure recovery was changed after actual truncation errors; no per-case rules or gold in prompts. Post-hoc development, not unseen-test confirmation.",
+  "selection": "all19 math and all125 Multi-Document QA; report every outcome, no question-level routing or favorable subset selection",
+  "reference_policy": "Earlier complete conditions are preserved. Final answer field precedes justification; a failed optional review retains its valid draft; only already-complete explicit answer fields can be recovered from truncated structured output. Request-exact caches may be imported from condition2 with provenance; not fresh inference or speedup."
+}

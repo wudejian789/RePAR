@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>RePAR · 知识问答</title>
+  <link rel="icon" type="image/svg+xml" href="/static/vendor/network.svg">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/studio.css">
+  <link rel="stylesheet" href="/static/product.css">
+  <script src="/static/vendor/cytoscape-3.33.1.min.js" defer></script>
+  <script src="/static/vendor/katex/katex.min.js" defer></script>
+  <script src="/static/vendor/katex/auto-render.min.js" defer></script>
+  <script type="module" src="/static/studio.js"></script>
+</head>
+<body class="studio">
+  <header class="studio-header">
+    <a href="/studio" class="studio-brand"><span aria-hidden="true" class="brand-mark">R</span><strong>RePAR</strong></a>
+    <nav class="header-meta" aria-label="工作台导航"><a id="chat-link" href="/studio" class="history-link">知识问答</a><a id="libraries-link" href="/studio/libraries" class="history-link">知识库管理</a><a href="/" class="history-link">评测案例</a></nav>
+  </header>
+  <main class="studio-grid">
+    <aside class="session-panel" aria-label="会话">
+      <div class="panel-title"><h2>会话</h2></div>
+      <button id="new-session" type="button" class="outline-control">新建会话</button>
+      <nav id="session-list" class="session-list" aria-label="最近会话"></nav>
+    </aside>
+
+    <section class="workspace-main" aria-label="知识库问答工作区">
+      <header class="workspace-header">
+        <div class="workspace-heading">
+          <h1 id="chat-title">知识问答</h1>
+        </div>
+      </header>
+      <section id="chat-view" class="chat-panel" aria-label="知识库问答">
+        <div id="messages" class="messages" aria-label="历史问答" aria-live="polite"></div>
+        <form id="ask-form" class="ask-form">
+          <label class="visually-hidden" for="question">提问</label>
+          <textarea id="question" rows="3" maxlength="20000" placeholder="选择知识库后提问…" required disabled></textarea>
+          <div class="composer-footer"><div class="composer-tools">
+            <label id="composer-library" class="composer-library"><span>参考库</span><select id="session-library" aria-label="参考知识库"></select></label>
+            <label class="follow-up"><input id="follow-up" type="checkbox" disabled> 接续上一问</label>
+          </div>
+            <button class="primary-control" id="ask" type="submit" disabled>发送 <span aria-hidden="true">↑</span></button></div>
+          <p id="chat-status" role="status" class="panel-status"></p>
+        </form>
+      </section>
+    </section>
+
+    <aside class="trace-panel" id="trace-panel" aria-labelledby="trace-heading" hidden>
+      <header class="trace-header">
+        <div><h2 id="trace-heading" tabindex="-1">执行轨迹</h2><p id="trace-question" class="trace-question"></p></div>
+        <button id="trace-toggle" class="icon-control" type="button" aria-controls="trace-content" aria-expanded="true" aria-label="收起执行轨迹" title="收起执行轨迹"></button>
+      </header>
+      <div id="trace-content" class="trace-content">
+        <div class="trace-overview">
+          <p id="trace-status" class="panel-status"></p>
+          <p id="trace-usage" class="token-usage" aria-label="本次问答的累计 token 用量" hidden></p>
+        </div>
+        <div class="trace-timeline">
+          <div class="trace-section-heading"><h3>时间线</h3><span id="trace-count" class="trace-count"></span><button id="follow-trace" class="text-button" type="button" hidden>跟随最新</button></div>
+          <ol id="timeline" class="timeline"></ol>
+          <p id="trace-empty" class="panel-status"></p>
+        </div>
+        <div id="event-detail" class="event-detail" role="region" aria-label="步骤详情" tabindex="0"></div>
+        <div id="raw-content" class="event-detail" role="region" aria-label="完整 Trace" tabindex="0" hidden></div>
+        <div class="trace-actions"><button id="raw-trace" class="outline-control" type="button" disabled>完整 Trace</button><button id="download" class="outline-control" type="button" hidden disabled>下载 JSON</button><a id="trace-link" class="outline-control" hidden>运行链接 ↗</a></div>
+      </div>
+    </aside>
+
+    <section id="library-manager" class="library-manager" aria-label="知识库管理" hidden>
+      <header class="manager-header"><h1>知识库管理</h1><button id="new-library" class="primary-control" type="button">新建知识库</button></header>
+      <div class="manager-grid">
+        <section class="manager-directory" aria-label="知识库目录">
+          <label class="field">查找知识库<input id="library-search" type="search" placeholder="按名称或文件查找"></label>
+          <div id="library-directory"></div>
+        </section>
+        <section id="library-details" class="manager-details" aria-label="当前知识库">
+          <header id="library-heading" class="library-heading" hidden>
+            <div class="library-title"><h2 id="current-library-name"></h2><p id="current-library-status" class="panel-status" role="status"></p></div>
+            <div class="manager-actions">
+              <div id="library-tabs" class="library-tabs" role="tablist" aria-label="知识库视图">
+                <button id="library-tab-details" type="button" role="tab" aria-controls="library-summary" aria-selected="true" data-library-view="details">知识库详情</button>
+                <button id="library-tab-index" type="button" role="tab" aria-controls="index-host" aria-selected="false" tabindex="-1" data-library-view="index">浏览完整索引</button>
+                <button id="library-tab-graph" type="button" role="tab" aria-controls="manager-graph" aria-selected="false" tabindex="-1" data-library-view="graph">知识图谱</button>
+              </div>
+              <a id="ask-with-library" class="primary-control" hidden>用此库提问</a>
+            </div>
+          </header>
+          <div id="library-content" class="library-content">
+            <section id="library-summary" role="tabpanel" aria-labelledby="library-tab-details" tabindex="0"></section>
+            <section id="index-host" role="tabpanel" aria-labelledby="library-tab-index" tabindex="0" hidden><div id="knowledge-content"></div></section>
+            <section id="manager-graph" class="manager-graph" role="tabpanel" aria-labelledby="library-tab-graph" tabindex="0" hidden>
+              <div id="graph-view" class="graph-panel"></div>
+            </section>
+          </div>
+        </section>
+      </div>
+      <form id="upload-form" class="upload-form" hidden>
+        <h2>上传资料建库</h2>
+        <label class="field">知识库名称<input id="library-name" maxlength="120" placeholder="例如：项目资料" required></label>
+        <label class="dropbox" id="dropbox"><strong>选择或拖入文件</strong><span>UTF-8 文本 · 可选多个文件</span><input id="files" type="file" accept=".txt,.md,.csv,.json,.jsonl,text/*" multiple></label>
+        <ul id="files-list" class="files-list" hidden></ul>
+        <p id="upload-status" role="status" class="panel-status"></p>
+        <div class="manager-actions"><button id="cancel-build" class="outline-control" type="button">取消</button><button class="primary-control" id="build" type="submit">构建索引</button></div>
+      </form>
+      <p id="manager-status" role="status" class="panel-status"></p>
+    </section>
+  </main>
+
+  <dialog id="delete-session-dialog" class="studio-dialog delete-session-dialog" aria-labelledby="delete-session-title">
+    <header class="studio-dialog-header"><h2 id="delete-session-title">删除会话？</h2></header>
+    <form id="delete-session-form" class="dialog-body">
+      <p id="delete-session-name"></p>
+      <p class="delete-session-note">此会话的问答和执行轨迹将被永久删除。</p>
+      <p id="delete-session-status" class="panel-status" role="status"></p>
+      <div class="dialog-controls">
+        <button id="cancel-session-delete" class="outline-control" type="button" autofocus>取消</button>
+        <button id="confirm-session-delete" class="danger-control" type="submit">删除会话</button>
+      </div>
+    </form>
+  </dialog>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "experiment_id": "math2025-national-i-qwen08-v2-intermediate-budget-v1",
+  "output": "artifacts/math_2025_national_i_budget_v1",
+  "questions": "data/MATH_2025_NATIONAL_I/MATH_2025_NATIONAL_I_QA.jsonl",
+  "textbook": "data/MATH_2025_NATIONAL_I/textbook_chunks.jsonl",
+  "solver_config": "configs/repar_v2.json",
+  "methods": ["direct", "bm25", "repar"],
+  "solver_overrides": {
+    "answer_max_tokens": 4096,
+    "direct_input_budget": 257024,
+    "trace_dir": "artifacts/math_2025_national_i_budget_v1/traces",
+    "plan_max_tokens": 512,
+    "action_max_tokens": 256,
+    "reflection_max_tokens": 1024
+  },
+  "judge": {
+    "base_url": "http://127.0.0.1:9090",
+    "model": "Qwen3.8-27B-UD-Q4_K_M",
+    "deployment_id": "math2025-judge-qwen38-27b-ud-q4km-9090-20261118",
+    "temperature": 0,
+    "seed": 20261118,
+    "enable_thinking": false,
+    "max_tokens": 3072,
+    "replicate_seeds": [20261118, 20261119, 20261120]
+  },
+  "budget_comparison": {
+    "parent": "artifacts/math_2025_national_i_v5",
+    "changed_solver_keys": ["plan_max_tokens", "action_max_tokens", "reflection_max_tokens"],
+    "reused_methods": ["direct", "bm25"],
+    "rerun_methods": ["repar"],
+    "selection": "all19; one fixed higher-budget condition before generation; no per-question selection",
+    "prior_exposure": "Post-hoc experiment after the original math scores and failure traces were inspected. Not an unseen-test confirmation.",
+    "repetition_attribution": "Repetition also occurs in direct/BM25. Treat as a shared base-model/context/decoding symptom; do not attribute it uniquely to RePAR or claim intrinsic causality without controlled experiments.",
+    "preserved": "parent frozen implementation, prompts, JSON field lengths, 4 actions, final4096, source/index, base model, seed, thinking-off, judge rubric",
+    "timing_limit": "Other authorized benchmark workers may share hardware. No isolated throughput or speedup claim."
+  }
+}

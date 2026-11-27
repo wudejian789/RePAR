@@ -1,0 +1,6 @@
+{
+  "experiment_id": "benchmark-r31-08-20261124",
+  "output": "artifacts/benchmark_r31_08_20261124",
+  "agent_config": "configs/repar_v4_r31.json",
+  "temperature_reference": "configs/math_08_temperature_01_20261124.json"
+}

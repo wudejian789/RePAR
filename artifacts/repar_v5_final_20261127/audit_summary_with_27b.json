@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "checked_at": "2026-11-27T20:20:03.010694+08:00",
+  "combinations": 24,
+  "measured": 16,
+  "unmeasured": 8,
+  "prior_rows_preserved": 22,
+  "source_hashes_verified": 14,
+  "csv_rows_verified": 24,
+  "links_verified": 262,
+  "preexisting_unrelated_missing_links": [
+    {
+      "file": "all_results_new.md",
+      "link": "artifacts/benchmark_r52_08_20261125/summary_seed_42_math_longbench.json"
+    }
+  ],
+  "token_arithmetic": "passed",
+  "missing_values": "passed",
+  "final_v5_registration": "passed",
+  "raw_predictions_and_scores_unchanged": true,
+  "raw_sha256": {
+    "artifacts/repar_v5_27b_direct8k_20261127/seed_42/protocol.json": "6fe60f2895539fdc64c3963477f03257f729ecf2564904e8ad5364edf0acb76b",
+    "artifacts/repar_v5_27b_direct8k_20261127/seed_42/summary.json": "ae309e034da01acbd967fb70a0a410ce8d0d50c5f2744e7df0423771dac5416a",
+    "artifacts/repar_v5_27b_direct8k_20261127/seed_42/math/predictions.jsonl": "38b4a2b9d37c3e5e04b087cc9f230aac9c521a8839ee93e64240abd54cd710b5",
+    "artifacts/repar_v5_27b_direct8k_20261127/seed_42/math/grades.jsonl": "9bad0be47c3c0ccc687fd91fa1dbc64093a5c31f7555e805ce1ad47d8663b359",
+    "artifacts/repar_v5_27b_direct8k_20261127/seed_42/longbench/predictions.jsonl": "e00d892041475f7c998b59c208c64021bdb35f09fb58348fdb4d9731fc7fa7ab"
+  },
+  "no_model_calls_in_summary_phase": true
+}

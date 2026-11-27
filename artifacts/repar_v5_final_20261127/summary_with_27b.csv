@@ -1,0 +1,25 @@
+﻿model,benchmark,method,method_id,seed,measured,score,max_score,fully_correct,accuracy,online_input_tokens,online_output_tokens,online_total_tokens,online_calls,online_cache_hits,build_input_tokens,build_output_tokens,build_total_tokens,build_calls,build_cache_hits,total_tokens_build_plus_online,judge_input_tokens,judge_output_tokens,judge_calls,judge_cache_hits,online_case_wall_seconds,no_answer_count,embedding_document_body_tokens,source
+0.8B,MATH,直接回答,direct,42,True,31.333333333333336,150,2,-,4872477,40128,4912605,19,0,0,0,0,0,0,4912605,113096,9592,38,0,631.8227913998999,0,-,artifacts/math_08_temperature_01_20261124/summary.json#runs/42/08/math/direct
+0.8B,MATH,BM25 RAG,bm25,42,True,41.0,150,6,-,583228,38896,622124,19,0,0,0,0,0,0,622124,110262,10898,38,0,356.3774623001227,0,-,artifacts/math_08_temperature_01_20261124/summary.json#runs/42/08/math/bm25
+0.8B,MATH,RAPTOR,raptor,42,True,26.0,150,5,-,110203,54433,164636,19,0,655985,53700,709685,537,1,874321,142928,10246,38,0,384.5463858003495,0,-,artifacts/math_08_temperature_01_20261124/summary.json#runs/42/08/math/raptor
+0.8B,MATH,HippoRAG2,hipporag2,42,False,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+0.8B,MATH,HyperGraphRAG,hypergraphrag,42,False,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+0.8B,MATH,RePAR v5,v5,42,True,40.666666666666664,150,6,-,930363,140918,1071281,131,0,0,0,0,0,0,1071281,54906,9560,16,0,475.5991783000354,0,633724,artifacts/repar_v5_direct8k_20261127/seed_42/summary.json
+0.8B,LongBench v2 Multi-Document,直接回答,direct,42,True,27,125,-,0.216,12868526,1000,12869526,125,0,0,0,0,0,0,12869526,0,0,0,0,2869.6399214997655,0,-,artifacts/math_08_temperature_01_20261124/summary.json#runs/42/08/longbench/direct
+0.8B,LongBench v2 Multi-Document,BM25 RAG,bm25,42,True,29,125,-,0.232,1131656,1000,1132656,125,0,0,0,0,0,0,1132656,0,0,0,0,969.9376261000289,0,-,artifacts/math_08_temperature_01_20261124/summary.json#runs/42/08/longbench/bm25
+0.8B,LongBench v2 Multi-Document,RAPTOR,raptor,42,True,27,125,-,0.216,885545,968,886513,121,0,16855867,1072100,17927967,10725,1,18814480,0,0,0,0,664.5293334003072,4,-,artifacts/math_08_temperature_01_20261124/summary.json#runs/42/08/longbench/raptor
+0.8B,LongBench v2 Multi-Document,HippoRAG2,hipporag2,42,True,2,125,-,0.016,80045,72,80117,9,0,27323078,35586786,62909864,48408,0,62989981,0,0,0,0,109.185898500029,116,-,artifacts/math_08_temperature_01_20261124/summary.json#runs/42/08/longbench/hipporag2
+0.8B,LongBench v2 Multi-Document,HyperGraphRAG,hypergraphrag,42,True,35,125,-,0.28,2680808,968,2681776,121,0,989713724,213763514,1203477238,154590,0,1206159014,0,0,0,0,1957.373648400302,4,-,artifacts/math_08_temperature_01_20261124/summary.json#runs/42/08/longbench/hypergraphrag
+0.8B,LongBench v2 Multi-Document,RePAR v5,v5,42,True,35,125,-,0.28,5547870,177543,5725413,1222,0,0,0,0,0,0,5725413,0,0,0,0,1280.6843260998721,0,17478760,artifacts/repar_v5_direct8k_20261127/seed_42/summary.json
+27B,MATH,直接回答,direct,42,True,132.33333333333334,150,15,-,2399133,36250,2435383,19,0,0,0,0,0,0,2435383,105270,8546,38,0,3223.012264099787,0,-,artifacts/math_08_temperature_01_20261124/summary.json#runs/42/27/math/direct
+27B,MATH,BM25 RAG,bm25,42,True,139.16666666666669,150,16,-,583228,38321,621549,19,0,0,0,0,0,0,621549,109490,8516,38,1,3396.1367609004956,0,-,artifacts/math_08_temperature_01_20261124/summary.json#runs/42/27/math/bm25
+27B,MATH,RAPTOR,raptor,42,False,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+27B,MATH,HippoRAG2,hipporag2,42,False,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+27B,MATH,HyperGraphRAG,hypergraphrag,42,False,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+27B,MATH,RePAR v5,v5,42,True,138.33333333333334,150,17,-,170750,75132,245882,76,0,0,0,0,0,0,245882,49284,8814,16,0,1990.1743040999572,0,633724,artifacts/repar_v5_27b_direct8k_20261127/seed_42/summary.json
+27B,LongBench v2 Multi-Document,直接回答,direct,42,True,64,125,-,0.512,9310269,1000,9311269,125,0,0,0,0,0,0,9311269,0,0,0,0,10286.515645300387,0,-,artifacts/math_08_temperature_01_20261124/summary.json#runs/42/27/longbench/direct
+27B,LongBench v2 Multi-Document,BM25 RAG,bm25,42,True,58,125,-,0.464,1131656,1000,1132656,125,0,0,0,0,0,0,1132656,0,0,0,0,853.9680819003843,0,-,artifacts/math_08_temperature_01_20261124/summary.json#runs/42/27/longbench/bm25
+27B,LongBench v2 Multi-Document,RAPTOR,raptor,42,False,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+27B,LongBench v2 Multi-Document,HippoRAG2,hipporag2,42,False,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+27B,LongBench v2 Multi-Document,HyperGraphRAG,hypergraphrag,42,False,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+27B,LongBench v2 Multi-Document,RePAR v5,v5,42,True,46,125,-,0.368,2951524,175488,3127012,784,0,0,0,0,0,0,3127012,0,0,0,0,6731.278022599989,0,17478760,artifacts/repar_v5_27b_direct8k_20261127/seed_42/summary.json

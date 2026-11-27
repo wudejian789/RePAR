@@ -1,0 +1,2 @@
+# Preserve exact source/config bytes used in frozen experiment hashes.
+* -text
