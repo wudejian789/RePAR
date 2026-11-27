@@ -85,15 +85,21 @@ class Handler(SimpleHTTPRequestHandler):
             return
         if path == "/health":
             data = Path(self.directory) / "data"
-            manifest = data / "manifest.json"
-            datasets = json.loads(manifest.read_text(encoding="utf-8")).get("datasets", {}) if manifest.exists() else {}
-            raw = json.dumps({"status": "ok", "cases": datasets.get("longbench", {}).get("cases", 125),
-                              "datasets": datasets}).encode()
-            self.send_response(HTTPStatus.OK)
-            self.send_header("Content-Type", "application/json; charset=utf-8")
-            self.send_header("Content-Length", str(len(raw)))
-            self.end_headers()
-            self.wfile.write(raw)
+            datasets = {}
+            for name, relative in (("longbench", "overview.json"), ("math", "math/overview.json")):
+                overview = data / relative
+                if overview.is_file():
+                    try:
+                        saved = json.loads(overview.read_text(encoding="utf-8"))
+                        datasets[name] = {"cases": len(saved["cases"])}
+                    except (OSError, ValueError, KeyError, TypeError):
+                        continue
+            self.send_json(HTTPStatus.OK, {"status": "ok",
+                           "cases": datasets.get("longbench", {}).get("cases", 0),
+                           "datasets": datasets})
+            return
+        if path in {"/data/overview.json", "/data/math/overview.json"} and not Path(self.translate_path(path)).is_file():
+            self.send_json(HTTPStatus.OK, {"cases": [], "methods": {}, "case_count": 0})
             return
         if path in {"/studio", "/studio/libraries"}:
             self.path = "/studio.html"
@@ -124,24 +130,18 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--host", default="127.0.0.1")
     p.add_argument("--port", type=int, default=8080)
-    p.add_argument("--rebuild", action="store_true", help="Re-export the frozen results before serving")
     p.add_argument("--studio-config", type=Path, default=Path("configs/repar_v5.json"))
     p.add_argument("--studio-root", type=Path, default=Path("artifacts/studio_v5"))
     args = p.parse_args()
-    if args.rebuild or not all((WEBROOT / "data" / name).exists()
-                               for name in ("overview.json", "math/overview.json", "manifest.json")):
-        try:
-            from .build_data import export
-        except ImportError:
-            from build_data import export
-        export()
     mimetypes.add_type("application/javascript", ".js")
     studio = None
     if args.studio_config.is_file():
         from webserver.studio import Studio
         from webserver.studio_examples import example_libraries
-        studio = Studio(args.studio_root, args.studio_config, examples=example_libraries(WEBROOT.parent))
-    with ThreadingHTTPServer((args.host, args.port), functools.partial(Handler, directory=WEBROOT, studio=studio)) as server:
+        examples = example_libraries(WEBROOT.parent)
+        studio = Studio(args.studio_root, args.studio_config, examples=examples)
+    with ThreadingHTTPServer((args.host, args.port), functools.partial(
+            Handler, directory=WEBROOT, studio=studio)) as server:
         print(f"RePAR Case Lab: http://{args.host}:{args.port}", flush=True)
         try:
             server.serve_forever()

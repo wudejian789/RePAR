@@ -28,9 +28,10 @@ venv/
 !/models/**/source_manifest.json
 !/models/**/download_manifest.json
 
-# Raw benchmarks and textbooks stay local.
+# Publish the exact LongBench snapshot via Git LFS; other data are reviewed individually.
 /data/**
 !/data/**/
+!/data/longbench_v2.json
 !/data/**/README.md
 !/data/**/LICENSE*
 !/data/repo.json
@@ -38,6 +39,11 @@ venv/
 
 # Runtime output, with a lightweight result allowlist.
 /artifacts/*
+!/artifacts/dataset_manifest.json
+!/artifacts/deployment/
+/artifacts/deployment/*
+!/artifacts/deployment/model_manifest.json
+!/artifacts/deployment/mtp_model_manifest.json
 !/artifacts/repar_v5_final_20261127/
 /artifacts/repar_v5_final_20261127/*
 !/artifacts/repar_v5_final_20261127/summary.json

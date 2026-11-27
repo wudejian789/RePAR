@@ -1,6 +1,6 @@
 ﻿# RePAR 知识问答与评测工作台
 
-更新时间为 2026-11-27 16:15，Asia/Shanghai。
+更新时间为 2026-11-28 01:06，Asia/Shanghai。
 
 | 数据集 | 评测条件 |
 |---|---|
@@ -16,7 +16,17 @@ conda activate RePAR
 python -m webserver.server --port 8080
 ```
 
-打开工作台进入知识问答，顶部导航可切到知识库管理与评测。首次启动会补齐缺失的页面数据。已有旧版页面数据时，使用 `python -m webserver.build_data` 从冻结记录重新导出。案例展示使用 Python 标准库和本地静态资源。[知识问答](http://127.0.0.1:8080/studio) · [LongBench v2](http://127.0.0.1:8080/) · [MATH 2025](http://127.0.0.1:8080/?dataset=math)
+打开知识问答后，顶部导航可切到知识库管理与评测。**启动不需要历史实验归档、模型权重或预先生成的页面数据，不运行评测导出和模型推理。**默认从 `artifacts/studio_v5/` 读取已保存的知识库、会话与问答，从 `webserver/data/` 读取评测页面缓存；存在就加载，不存在就显示空列表/暂无结果。缺少某个数据集的缓存不影响其他页面。案例展示使用 Python 标准库和本地静态资源。[知识问答](http://127.0.0.1:8080/studio) · [LongBench v2](http://127.0.0.1:8080/) · [MATH 2025](http://127.0.0.1:8080/?dataset=math)
+
+在全新源码克隆中，可以先 `python -m pip install -e .` 后启动空工作台。实际上传建库时才加载 EmbeddingGemma 和 spaCy，提交问答时才连接配置的模型。模型与运行参数见 [项目配置说明](../README.md#配置文件与运行参数)。可显式选择配置和保存位置：
+
+```powershell
+python -m webserver.server --port 8080 --studio-config configs/repar_v5.json --studio-root artifacts/my_workspace
+```
+
+工作台记录会持久化，重启后自动读取。CLI 的 `artifacts/indexes_v5/` 是研究命令的缓存，不是 Web 知识库注册表；在网页使用的新资料请通过知识库管理上传。兼容的本地冻结示例库也会自动发现，缺失或不完整时跳过，不阻止服务启动。
+
+若需要主动从完整的历史预测、索引与请求归档生成评测页面，可独立运行 `python -m webserver.build_data`。这是可选的离线导出操作，需要其对应的源归档；Web 服务本身从不自动执行。旧的服务参数 `--rebuild` 已移除，避免将服务启动与历史导出耦合。
 
 ## 研究工作台
 
@@ -42,7 +52,7 @@ python -m webserver.server --port 8080
 
 聊天消息用本地 KaTeX 0.16.47 输出 MathML，支持 `$…$`、`$$…$$`、`\(…\)` 和 `\[…\]`。长回复默认显示预览，可展开或收起。调用记录保留 LaTeX 与其他原始文本。[KaTeX 许可证](static/vendor/katex/LICENSE)
 
-工作台使用 [v5 配置](../configs/repar_v5.json)。建库需要 EmbeddingGemma、PyTorch 和中英文 spaCy 模型，问答需要配置的模型服务。依赖安装见 [项目 README](../README.md#repar-v5)。用 `--studio-config` 指定其他 v5 配置，`--studio-root` 指定持久化目录。默认数据位于 `artifacts/studio_v5/`，包含原文、索引、问答和调用记录。服务默认监听回环地址，适合本地单用户使用。建库和问答共用一个后台任务队列。
+工作台使用 [v5 配置](../configs/repar_v5.json)。建库需要 EmbeddingGemma、PyTorch 和中英文 spaCy 模型，问答需要配置的模型服务。依赖安装见 [项目 README](../README.md#环境安装)。用 `--studio-config` 指定其他 v5 配置，`--studio-root` 指定持久化目录。默认数据位于 `artifacts/studio_v5/`，包含原文、索引、问答和调用记录。服务默认监听回环地址，适合本地单用户使用。建库和问答共用一个后台任务队列。
 
 ## 逐题复核
 

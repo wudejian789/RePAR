@@ -1,0 +1,1154 @@
+{
+  "source": "https://www.modelscope.cn/datasets/ZhipuAI/LongBench-v2",
+  "revision": "6a226395b12a1438f40dfabbe0c5ea55f6a102bc",
+  "sha256": "15d61c22d92c96900b3c4948b6aeea218d3214b676a65df48e7b8555604c7fe2",
+  "total": 503,
+  "domains": {
+    "Long In-context Learning": 81,
+    "Single-Document QA": 175,
+    "Multi-Document QA": 125,
+    "Long-dialogue History Understanding": 39,
+    "Code Repository Understanding": 50,
+    "Long Structured Data Understanding": 33
+  },
+  "multi_doc_count": 125,
+  "lengths": {
+    "long": 23,
+    "medium": 44,
+    "short": 58
+  },
+  "sub_domains": {
+    "Governmental": 23,
+    "Academic": 50,
+    "Financial": 15,
+    "Multi-news": 23,
+    "Legal": 14
+  },
+  "samples": [
+    {
+      "_id": "66f94f9ebb02136c067c4fde",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "hard",
+      "length": "long",
+      "context_chars": 2007494,
+      "context_sha256": "a6e736e36d56a9ff03e37fd7d9fa48bfeea11df566f741861728557a1531f816"
+    },
+    {
+      "_id": "66ec0c4c821e116aacb1994a",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "easy",
+      "length": "medium",
+      "context_chars": 244743,
+      "context_sha256": "cc6a5e120d94a97ea924a13d881ff9f574320ba7f1fd8f5e3a80a12bab9a7a3b"
+    },
+    {
+      "_id": "66ed875e821e116aacb2023e",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 259071,
+      "context_sha256": "347685955da027fdcb913239b156452b06b571741162853a8fbf6f2fa6a47e59"
+    },
+    {
+      "_id": "66f8c9febb02136c067c4511",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "hard",
+      "length": "long",
+      "context_chars": 1083074,
+      "context_sha256": "898b28dfa10ef6fc79738a00e9c058ab5fb229c6fd3ff69505a31766c812a77a"
+    },
+    {
+      "_id": "66f61d7dbb02136c067c1802",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Financial",
+      "difficulty": "easy",
+      "length": "long",
+      "context_chars": 1050812,
+      "context_sha256": "ab24332272b785b643e58f31eaadce581d33f7b225a5e15c8e7c0350d144e287"
+    },
+    {
+      "_id": "66f3f46f821e116aacb2ff5d",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "hard",
+      "length": "long",
+      "context_chars": 880670,
+      "context_sha256": "eff654417303aaf6720a90ce674fc3b15b45cfbe15e0c15071fe7dcfd1faaaf6"
+    },
+    {
+      "_id": "66f599ef821e116aacb34099",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 166136,
+      "context_sha256": "5a78d9e3f8fb603e0b32841ccc39d5a876329054aa57528fe338f5203efd48a9"
+    },
+    {
+      "_id": "66f3c1ab821e116aacb2ead1",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 210092,
+      "context_sha256": "328e33ad7c1b98eaf6fb44d017260e5225f74625979908ec46638a665f5fda26"
+    },
+    {
+      "_id": "66fcf2f2bb02136c067c9169",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "easy",
+      "length": "short",
+      "context_chars": 111866,
+      "context_sha256": "5e8abe5348bfb6ca93dae11a11671e0d2515c46d5a185b47deda24b497f5ace5"
+    },
+    {
+      "_id": "66f40b9c821e116aacb30a99",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Financial",
+      "difficulty": "easy",
+      "length": "long",
+      "context_chars": 1949665,
+      "context_sha256": "c90869e134330a31b45b61744c8e1c0d1ef5d5934cb3221ad5d0b5617bfacf49"
+    },
+    {
+      "_id": "66f50109821e116aacb31f16",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 758267,
+      "context_sha256": "d36516719f3c305ae78bad4001b67b22ae2d4de199d653e7d2b6574f5ea3ad06"
+    },
+    {
+      "_id": "66f167c3821e116aacb274f4",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 831879,
+      "context_sha256": "455e731fa1dead4b253df19e60a6cca35e84a0e81ee81aa035dd43be0d127c0b"
+    },
+    {
+      "_id": "66eefe85821e116aacb228dc",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 118549,
+      "context_sha256": "ce4436344f5c6644fba62910fdb5f355ae2a6152d830389ca597c4367ab7e7b8"
+    },
+    {
+      "_id": "66f78ecfbb02136c067c2f12",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "easy",
+      "length": "short",
+      "context_chars": 64696,
+      "context_sha256": "ce63d39acc72cdd1e680800cb4306aeadfa8164f793297772f681151ffe9cfd3"
+    },
+    {
+      "_id": "66f95126bb02136c067c5070",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "easy",
+      "length": "short",
+      "context_chars": 103145,
+      "context_sha256": "1a9bfd4e49c459fbe1324a3de80978fb3653bfba64ce1b82dd05cc38f1f15ea7"
+    },
+    {
+      "_id": "6701cda0bb02136c067cb6eb",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 68269,
+      "context_sha256": "e4863e2ba975b6c3f934efb2834095980d62d17620141dca40b6d9005626ae2f"
+    },
+    {
+      "_id": "66fbab85bb02136c067c81dc",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 61556,
+      "context_sha256": "acfcec5a7c52a8fe5118ae513b96a0630e4643aa0482ee3133346c56c96f1d37"
+    },
+    {
+      "_id": "66fa7f1dbb02136c067c6e6b",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "easy",
+      "length": "short",
+      "context_chars": 65069,
+      "context_sha256": "e75f8eddbf714d86efd0e857130ecafa242aa6268537e349f041a72577e5ff31"
+    },
+    {
+      "_id": "66f3e58c821e116aacb2fabc",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "easy",
+      "length": "medium",
+      "context_chars": 645893,
+      "context_sha256": "ce8ab96d1472983de00cd65d3872ee395e9a724ff3949c1791062eeb5fa9a7ef"
+    },
+    {
+      "_id": "66f2adaf821e116aacb2aca9",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "long",
+      "context_chars": 891797,
+      "context_sha256": "c39ab7e9b2f6a50e4621ce1456b001a3930b22ab56a7c57649e600fc0462d1fb"
+    },
+    {
+      "_id": "66fb6d71bb02136c067c7c34",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Legal",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 122781,
+      "context_sha256": "465795ac0e3d04926e87bdfee06dd37dce848e3ac838f879f1dc1d5faf8314e7"
+    },
+    {
+      "_id": "66f14c70821e116aacb271ee",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 86592,
+      "context_sha256": "43d950fca16b765c8faa7a400bee96858d91eb8ce4778910b4226156db4b9146"
+    },
+    {
+      "_id": "66ebee0a5a08c7b9b35e1d05",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 104878,
+      "context_sha256": "f39d5b9abef2b4cd8b6e268c904ada0caab44128808cda3ca1365f11c1a6161a"
+    },
+    {
+      "_id": "66f2cacb821e116aacb2ba50",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 760508,
+      "context_sha256": "7f94e73c98aa1ac3851edd40b41a0922d08cb31ff166cfc935f239d8ecef975f"
+    },
+    {
+      "_id": "66f2c44e821e116aacb2b826",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 488760,
+      "context_sha256": "a3c60a305f7e543b7d2953ba1b80eca0fd58b9881b58c01134b4d3ac714c3ec2"
+    },
+    {
+      "_id": "66f016e6821e116aacb25497",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Legal",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 314738,
+      "context_sha256": "e20ce36c8b6f15863d139bde8333ced81ef26b975d8c1d7641c3511bce2e6bd0"
+    },
+    {
+      "_id": "66f97d7fbb02136c067c56b2",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Financial",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 222447,
+      "context_sha256": "78f1ceb13d775ef6e72c1cc42a5631b8305a282b74ddd608cd8182dac0ef28d8"
+    },
+    {
+      "_id": "66f3dd59821e116aacb2f6ba",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 738335,
+      "context_sha256": "9f2d091f1a4fc18bc78fad530135fc9b0159038e87e58a61f846ff0b97a94f02"
+    },
+    {
+      "_id": "66ee3c6d821e116aacb20f6f",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 209536,
+      "context_sha256": "cad96f9a76a05c7b025f2ab1085fcaeb8dc387be67e99b96cbe301ae0c611c9f"
+    },
+    {
+      "_id": "66f3c1c3821e116aacb2eaf6",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 159675,
+      "context_sha256": "5bc75e14e3170393a0294e84436ba6c89c78f6b1e727da39ae3afab22a422203"
+    },
+    {
+      "_id": "66ed364d821e116aacb1f47e",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "easy",
+      "length": "medium",
+      "context_chars": 281470,
+      "context_sha256": "af0528345250c2b4d514fed5e80a23978e0114d5286082ba5f51417ed2fbbed6"
+    },
+    {
+      "_id": "66fa0d88bb02136c067c5a8a",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Financial",
+      "difficulty": "hard",
+      "length": "long",
+      "context_chars": 920975,
+      "context_sha256": "99c6bbaf4f50b65f7bbb22428874f25cd2f6c85889b20afdc50e8efc0991a06c"
+    },
+    {
+      "_id": "66ec356a821e116aacb1c22b",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Legal",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 48765,
+      "context_sha256": "f7e1b2152bc9b2fadf817590c41a9fd7e826816936cb5c5322c4dcb1fe97dda5"
+    },
+    {
+      "_id": "66eb873c5a08c7b9b35dd849",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Legal",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 296781,
+      "context_sha256": "76cbd43041c4c0c5b649c3ba1dd8ba5ac115698c8ec6f914500694ec4affba5b"
+    },
+    {
+      "_id": "66ee4287821e116aacb21258",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 128309,
+      "context_sha256": "b8c1eafc93efdd12215172c9145b32af4e2ef4e2fb37c8f5d7c9115424253dee"
+    },
+    {
+      "_id": "66f55828821e116aacb3363e",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "hard",
+      "length": "long",
+      "context_chars": 1204315,
+      "context_sha256": "5815cd43318affae4a8c9779a0e3845561d839183c086e9e22428eca4926dcf9"
+    },
+    {
+      "_id": "66ed4274821e116aacb1f8f1",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 345177,
+      "context_sha256": "7e19f3f119a40910e24c9ce66bd7db42b9e38d0ab194234ea442f3dcb3b21336"
+    },
+    {
+      "_id": "66faac15bb02136c067c73f3",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 157019,
+      "context_sha256": "4d479cfa0c758f6de87b91e016187c3c81050ad890353338ec22e58397909f47"
+    },
+    {
+      "_id": "66f53ab2821e116aacb33299",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Financial",
+      "difficulty": "easy",
+      "length": "medium",
+      "context_chars": 475079,
+      "context_sha256": "985171e0678237831798499f58facde0894fff46d636bf8887a9fb61a12e51c3"
+    },
+    {
+      "_id": "66f6b623bb02136c067c2646",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 210397,
+      "context_sha256": "e9b0e72a21233b0abb47162fc9bd04460088fd6a73ce5c738e49539db7e224a2"
+    },
+    {
+      "_id": "66fba2bcbb02136c067c8112",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "easy",
+      "length": "medium",
+      "context_chars": 239169,
+      "context_sha256": "f4aec5312458b46221a455c737e7956dc6413f42aebdbb2a181454db23d7e561"
+    },
+    {
+      "_id": "66ec0874821e116aacb194a4",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 136143,
+      "context_sha256": "ddb77cf856511c256ea17bc606d51d3263cc74af656942400084b86f5bb7a607"
+    },
+    {
+      "_id": "66f2ad2b821e116aacb2ac0f",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 153926,
+      "context_sha256": "a1315034eba867040457969e1a39316e792cba29d0afe06fe007c0649bcdef52"
+    },
+    {
+      "_id": "66f41108821e116aacb30c41",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Financial",
+      "difficulty": "easy",
+      "length": "medium",
+      "context_chars": 762530,
+      "context_sha256": "ea420c9dc0b6752c0986cfc6125e4220595f2b5fc9c1a96c28838674c03a89f3"
+    },
+    {
+      "_id": "66f00f1a821e116aacb252cf",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "long",
+      "context_chars": 1577668,
+      "context_sha256": "39dc01f396a973f1c24380356ee244ca80c12f69e962d829397e55521012bcf7"
+    },
+    {
+      "_id": "66efaf70821e116aacb234bd",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 352693,
+      "context_sha256": "4639f3d07c80ed35008b57909ac9b871f289e4a3730b0433d1a1a808f8dff757"
+    },
+    {
+      "_id": "66f28ede821e116aacb29a27",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 607741,
+      "context_sha256": "4ba157304646ef0f3bffd07153d5136de9ad872143af525f42021e0884a783ad"
+    },
+    {
+      "_id": "66fa6867bb02136c067c6b3b",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 106137,
+      "context_sha256": "06315b7c5e6ef046088f2b4de08e197ddaa3276d92214a6168fa8c26f7f17b98"
+    },
+    {
+      "_id": "66fab090bb02136c067c74e7",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 161308,
+      "context_sha256": "f466cade0b850b87ed74b1ab5ae5917af5c1a7dfe7961f59f9ba68d2cab87685"
+    },
+    {
+      "_id": "66f41e45821e116aacb30ec3",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 65018,
+      "context_sha256": "a5ccd00597cf3bb1c111ae3d427ce1d8ac8acceaf433d536784cd51396465639"
+    },
+    {
+      "_id": "66fd4f54bb02136c067c9987",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 282443,
+      "context_sha256": "5326036f633cf28e781142e7d3b6ab0ad188b37c02c4de094f5125ef123f8468"
+    },
+    {
+      "_id": "67078ecabb02136c067d0b89",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Legal",
+      "difficulty": "easy",
+      "length": "short",
+      "context_chars": 197205,
+      "context_sha256": "89300fac87c9fc192b8265781efd9a5320660f6e47346c3e280a3e16b02a1fc4"
+    },
+    {
+      "_id": "66fab4bfbb02136c067c754c",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 68396,
+      "context_sha256": "b9711e488863f52c84dbc1b8cf9fb9c3ffe8ae9ea86c573e52e7b4e1cfd092f0"
+    },
+    {
+      "_id": "66fa190bbb02136c067c5d32",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Financial",
+      "difficulty": "hard",
+      "length": "long",
+      "context_chars": 1017135,
+      "context_sha256": "c5dcc5c3f20f5ff530f0e3f7689eb08d490d873cec58830048d1d553a59d5d7d"
+    },
+    {
+      "_id": "66f3c806821e116aacb2ed77",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Financial",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 233722,
+      "context_sha256": "e50420b329c7b86f08a59292c44743fd596636295b4b3924d4d239369497b132"
+    },
+    {
+      "_id": "66f3e473821e116aacb2fa73",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 197834,
+      "context_sha256": "806442419598352045d143c795518d3336809ea6095c8f502ed353425d6ef5b0"
+    },
+    {
+      "_id": "6704fe26bb02136c067ce670",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "hard",
+      "length": "long",
+      "context_chars": 1617711,
+      "context_sha256": "453a3f6f906c6ff23460777be8b0d6c0198b6cab8ce37918ef5cb4cd0996405a"
+    },
+    {
+      "_id": "66ec1aef821e116aacb1aa1a",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 226001,
+      "context_sha256": "012079b713faae4a856bbea713c6a7ad288f45f9adcfaa7e1ca1dae632428832"
+    },
+    {
+      "_id": "66fe81dcbb02136c067ca2de",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Legal",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 292355,
+      "context_sha256": "458d481b0f5f96b9b81aa429aae82f867a9d6abc64a46a0e7972309f0231ff5f"
+    },
+    {
+      "_id": "66f0ed5a821e116aacb265ab",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "easy",
+      "length": "short",
+      "context_chars": 105253,
+      "context_sha256": "00a923d0777499173da0365b819ce05afedcf6a99c55a933f066d6062613f928"
+    },
+    {
+      "_id": "66ee8bab821e116aacb21e44",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 114157,
+      "context_sha256": "4512f6c73ad180fcc5d033cf297963726ce8bf58e54c8909d78e7408a6df0daa"
+    },
+    {
+      "_id": "66f37eb9821e116aacb2d295",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Legal",
+      "difficulty": "easy",
+      "length": "short",
+      "context_chars": 50092,
+      "context_sha256": "1465b01e457975657ccfadf0457c4632517f443138fade485ecef3e81718579d"
+    },
+    {
+      "_id": "66f97dc3bb02136c067c56c8",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Legal",
+      "difficulty": "easy",
+      "length": "long",
+      "context_chars": 941262,
+      "context_sha256": "c41d2bccff7cc4e3f2e8fdba2cebf12d9153f800f493df9dc5ec37a949f40e49"
+    },
+    {
+      "_id": "66f7a96cbb02136c067c3255",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 171209,
+      "context_sha256": "ab57a4abed07f0b26f00709fe7f1185a5b468be02aa70401c34bf51104f9f765"
+    },
+    {
+      "_id": "66f2a557821e116aacb2a510",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 177582,
+      "context_sha256": "55fea265f38626a2eb28ab52a78effb940f743ca32aa44ee3b33817c72ac8e59"
+    },
+    {
+      "_id": "66f2a98a821e116aacb2a8bf",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 166965,
+      "context_sha256": "92d552b271e3a0fa0e9fa6ba9331d543a00b3b0bd67900e65ecbee533cbd7a2e"
+    },
+    {
+      "_id": "66f7aa19bb02136c067c327e",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 153559,
+      "context_sha256": "f00ceeeccebfe65360470698e392f755e442074d1ea9099f1c4eb33bc22e77ad"
+    },
+    {
+      "_id": "66f3fb15821e116aacb303dc",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Financial",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 278311,
+      "context_sha256": "62d99c1876fafd4a763a1670f6fdeef08b065467d197f14754765a7c6ba38450"
+    },
+    {
+      "_id": "66f26c5f821e116aacb2907c",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Financial",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 458615,
+      "context_sha256": "364875a0e2cf5623a49c8783e15da86b6e8bea39527a7c5ce3706e20bd57551a"
+    },
+    {
+      "_id": "66ed3960821e116aacb1f616",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "long",
+      "context_chars": 2120155,
+      "context_sha256": "3287304094dd92b0ea6f9625444a05a444df16e807dfc40955e16c5d443d789c"
+    },
+    {
+      "_id": "66ee490e821e116aacb2149c",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 77385,
+      "context_sha256": "8f637ce5820b5d032f2419d73ea34f45147a9c25224e6f991811b8b1823b22b7"
+    },
+    {
+      "_id": "66f3b843821e116aacb2e692",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 155159,
+      "context_sha256": "9b2eb81245d0960d7031138add314a560f23ec4ea46ff2ebf6b9e1b201492aa6"
+    },
+    {
+      "_id": "66f947abbb02136c067c4ea6",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 590572,
+      "context_sha256": "efef6bdca75775dd653dbdffddbf4dbe009477f44b741b0770bceabc07fa8978"
+    },
+    {
+      "_id": "66f59d31821e116aacb340f6",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 172201,
+      "context_sha256": "c89a26a70799356682e508be1de4558f170f1c7b577cf1e7eb5a61f67cb53033"
+    },
+    {
+      "_id": "66fbe00fbb02136c067c84c8",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 214954,
+      "context_sha256": "61e97242f40d5de37d1630c4383c333b8cda63766b5623d7e5f0c45e21b4952e"
+    },
+    {
+      "_id": "66f6bcf3bb02136c067c2703",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 56138,
+      "context_sha256": "03bb8e61b29861a2b73c131a537e13060dedf93ce7039a09437075af6615404c"
+    },
+    {
+      "_id": "6704e10fbb02136c067ce1a0",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 543592,
+      "context_sha256": "c6e1443c64bb91659e28c5a1802c9bea7e9ebe079186163ba29556d7887cc270"
+    },
+    {
+      "_id": "66f43414821e116aacb310a1",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Financial",
+      "difficulty": "easy",
+      "length": "long",
+      "context_chars": 1842906,
+      "context_sha256": "524dccb5aa11096e2998d2a0c32dd89c672b3dea5fb03e7bb5649c4c193bbd44"
+    },
+    {
+      "_id": "66f3abe6821e116aacb2e1d2",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "easy",
+      "length": "short",
+      "context_chars": 55943,
+      "context_sha256": "db56a56a2eda7b7943520a12317536fcbdee791f6251f342dc72d3522036893c"
+    },
+    {
+      "_id": "66ec0f7f821e116aacb19dde",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 144785,
+      "context_sha256": "e10d238d9d394a6f65e28190ec953902611f623c7a063d0dc2350c6bee180a9c"
+    },
+    {
+      "_id": "66f3de02821e116aacb2f73b",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 214245,
+      "context_sha256": "e9262a1b0ae3a0f4db457a6f3a430f16801bf89edcdd43b18bc1e4ad4e6a96b8"
+    },
+    {
+      "_id": "66f535c5821e116aacb33168",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 472100,
+      "context_sha256": "3ff77c69ddec1e411f63900051ba805f751980b98e918f2ebe21ffa02560c518"
+    },
+    {
+      "_id": "66ec21e6821e116aacb1b2d2",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 80986,
+      "context_sha256": "f9038f1b20db266df6817b8b0378216c601fc32c2b316d95aebe2cf15313eb49"
+    },
+    {
+      "_id": "66ee496a821e116aacb214d5",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 152264,
+      "context_sha256": "d2b50901f66071fd68996c790eb2d39762530f6ea04c06d3d8b1a8ab76a16e49"
+    },
+    {
+      "_id": "66f5605a821e116aacb3381f",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "hard",
+      "length": "long",
+      "context_chars": 859606,
+      "context_sha256": "00a5bb8ca0d1d43c02565366728fb41ca1763bf9f3b72ab31623a151d23d7ce5"
+    },
+    {
+      "_id": "66fc05b6bb02136c067c88e4",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 275565,
+      "context_sha256": "c23dec0077e7680c37a5622d0f1ad79d5adff998f542ac6c58d32317bafea879"
+    },
+    {
+      "_id": "66ec5af0821e116aacb1ce41",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 145348,
+      "context_sha256": "aeb62b7ffeb228d9287b93681806b4da58a2d084390581763f8eef058299ad7b"
+    },
+    {
+      "_id": "66fb8633bb02136c067c800b",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "easy",
+      "length": "medium",
+      "context_chars": 789435,
+      "context_sha256": "8c06fc8e786c7d73de4f9e00fffeb4b81b3a519bbfec308efbc3f1317bde6aee"
+    },
+    {
+      "_id": "66fc0152bb02136c067c8826",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "easy",
+      "length": "short",
+      "context_chars": 111845,
+      "context_sha256": "5ea641528d039060960be23270452b8cc8af55f5534e8d98f495e2d589416da9"
+    },
+    {
+      "_id": "66ec7ba6821e116aacb1d114",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 139087,
+      "context_sha256": "23c48669146d0eac8858c6cd5d7270c125734aed2e92e4bde0a7a35d3957b65d"
+    },
+    {
+      "_id": "66f41348821e116aacb30c89",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Legal",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 51426,
+      "context_sha256": "77fb4396c9420df739c115f2c8eccd7d41a2b1beb7474fc0d58c3b91e5a500a0"
+    },
+    {
+      "_id": "66f120a9821e116aacb26d02",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 76176,
+      "context_sha256": "70ced6b21bb7f45c3b5a1b72a90a3e35f01b17bc8075b30c1ddba4e290b21286"
+    },
+    {
+      "_id": "6707b3cabb02136c067d1021",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 512017,
+      "context_sha256": "5e8c94f7d08d7f8443748a085519418a0c84e0276d02e41fc5cf72069109429c"
+    },
+    {
+      "_id": "66f11349821e116aacb269e0",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "long",
+      "context_chars": 1637915,
+      "context_sha256": "2099f97399c1c9ed6b8f9de6e35a213bf5942bf04a97fb970a1d805d765f5e81"
+    },
+    {
+      "_id": "67062fbfbb02136c067cf66a",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "easy",
+      "length": "short",
+      "context_chars": 86127,
+      "context_sha256": "2280d3ee3305115e4edda7a78f758429181b6f240532d8e1da790b77b762bf7f"
+    },
+    {
+      "_id": "66f2e0bc821e116aacb2bf37",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Legal",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 55343,
+      "context_sha256": "78dfa60fcea07476893ed2779f9a7905c4cce281b6aef7fedc4a9dc859cebd7f"
+    },
+    {
+      "_id": "66f3c5f2821e116aacb2eccf",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "hard",
+      "length": "long",
+      "context_chars": 3678640,
+      "context_sha256": "cde5649392690c9eb3e814dd1537e17646b399a7fabca215307bb862efeb0b4a"
+    },
+    {
+      "_id": "66f24538821e116aacb2865e",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "long",
+      "context_chars": 1457493,
+      "context_sha256": "59b4b3d2157de60701616b98a0904d94a3344c4e564cc0ab02270a25aa8bff02"
+    },
+    {
+      "_id": "66eecc45821e116aacb225c3",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Legal",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 195816,
+      "context_sha256": "1595ea48742e549ae6f2c094eaa86874494ff2f72f30d6dc2c180d7b86ef4a2a"
+    },
+    {
+      "_id": "66fa415cbb02136c067c671c",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "easy",
+      "length": "medium",
+      "context_chars": 546183,
+      "context_sha256": "89b35ce6317d6ed808e3698035dfb406c324363309e3065d5868d3d6f4394748"
+    },
+    {
+      "_id": "66f96115bb02136c067c541c",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Legal",
+      "difficulty": "easy",
+      "length": "short",
+      "context_chars": 93148,
+      "context_sha256": "031896644f095bc464d85478aaf199592aa6bee851a80a972fbf2d7a2214857b"
+    },
+    {
+      "_id": "66f3f947821e116aacb3029b",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Financial",
+      "difficulty": "easy",
+      "length": "long",
+      "context_chars": 1015452,
+      "context_sha256": "b665b4d7096c96789974a866c723872ade6ef637b516cadda8313820accb06d1"
+    },
+    {
+      "_id": "66faa8efbb02136c067c7357",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 226874,
+      "context_sha256": "f0e6e74b0a8235cdcf8b1794f2ce36aacbc86726c831dba92bc2f21db31aa910"
+    },
+    {
+      "_id": "66f3e604821e116aacb2fadf",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "long",
+      "context_chars": 2261771,
+      "context_sha256": "29b043cd24fcdaf1da270e6324a185d3bccabb451000da017d0c7b4202fe33de"
+    },
+    {
+      "_id": "67009bd8bb02136c067caba9",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "easy",
+      "length": "medium",
+      "context_chars": 709353,
+      "context_sha256": "5cd35b7e004ba0a1dfb606271ca86f23bcb2ca4ea0baf1c40a6e82cbde5663ff"
+    },
+    {
+      "_id": "66fb6527bb02136c067c7b4f",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Legal",
+      "difficulty": "easy",
+      "length": "long",
+      "context_chars": 888194,
+      "context_sha256": "ec7ef9bcff13a4dbc6fcf902350d780e6608a356cf748854e94583811284f078"
+    },
+    {
+      "_id": "66f4ce9e821e116aacb31731",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "easy",
+      "length": "medium",
+      "context_chars": 241749,
+      "context_sha256": "19ce604ff084180ab623e1fbe32d93957054a8f341add9621364853f5e5abea4"
+    },
+    {
+      "_id": "66ec17e4821e116aacb1a6a7",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Financial",
+      "difficulty": "hard",
+      "length": "long",
+      "context_chars": 7211576,
+      "context_sha256": "bf26631e7e87e44c78d55699821c7334f61cd73fa81a343d6b56c2d6954d6846"
+    },
+    {
+      "_id": "66ec09ec821e116aacb19620",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 57281,
+      "context_sha256": "069ddb93264d95f93411dcf9fb7a3bfef1f4553d858324bc12b5ed59d804b621"
+    },
+    {
+      "_id": "66f3cca6821e116aacb2ef7c",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "easy",
+      "length": "medium",
+      "context_chars": 450764,
+      "context_sha256": "0af41235a17c19ccce5054486509718388e6b74491a8a14d59edd2d2f0beb22e"
+    },
+    {
+      "_id": "66f590fa821e116aacb33f35",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 216214,
+      "context_sha256": "c21dade139dae1cb857e0937409d819def4e741cbce897ffb1d43a56bde93d94"
+    },
+    {
+      "_id": "66f8c6b4bb02136c067c4480",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 58862,
+      "context_sha256": "048c11de2abcd53ec06570f02f370beae566670458368914d7ee6f781bdd8580"
+    },
+    {
+      "_id": "66f245cc821e116aacb28698",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "easy",
+      "length": "short",
+      "context_chars": 53982,
+      "context_sha256": "bbcd8474a4d33ac44225bf417b1c4e8963ac338ce2e4fe7f53566e0b8a771ba4"
+    },
+    {
+      "_id": "66efa5ea821e116aacb23268",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "easy",
+      "length": "medium",
+      "context_chars": 283765,
+      "context_sha256": "7fc1514e4e70c00b61c62addb6c0acb4517de865d369f4a63579fe9b65440099"
+    },
+    {
+      "_id": "670646aebb02136c067cf85a",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "easy",
+      "length": "medium",
+      "context_chars": 378895,
+      "context_sha256": "fffc9cce03590e442e03977e1a34840c74c9ffb684c33f2a2dc684137a64eb25"
+    },
+    {
+      "_id": "66efa466821e116aacb23219",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Legal",
+      "difficulty": "easy",
+      "length": "short",
+      "context_chars": 186895,
+      "context_sha256": "81e0b1dae587953e80dc22769a03b0050fea4509a47782f978a8f9edd16c1573"
+    },
+    {
+      "_id": "66fb5f73bb02136c067c7ae7",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Multi-news",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 76481,
+      "context_sha256": "fc49df99f60ff46306bc499dcb205399f2c9b45a94e514c4f888f632972d4e66"
+    },
+    {
+      "_id": "66f379e8821e116aacb2d161",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 270679,
+      "context_sha256": "881e4fb65e2ef809442a5acc3545d419d9fc8883abef397674b9f014cd16a5ae"
+    },
+    {
+      "_id": "66f8c783bb02136c067c44b8",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Financial",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 336986,
+      "context_sha256": "34f0c0f1e55366b5dd55548d90a3ceb44e020223d0ded82e0e7632d9fbbd08b1"
+    },
+    {
+      "_id": "66f10d67821e116aacb268d0",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 68044,
+      "context_sha256": "1a273f05446e03aac01f2fd87050ada9bf4ea4e73a54e0e0b8253d100f70033e"
+    },
+    {
+      "_id": "66f3c081821e116aacb2e9fa",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Governmental",
+      "difficulty": "hard",
+      "length": "medium",
+      "context_chars": 875897,
+      "context_sha256": "9a87d7e17768ff739bc53a5ef820ec3dc98c4d76b205496f102297e4668960c9"
+    },
+    {
+      "_id": "66f2ad89821e116aacb2ac92",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "hard",
+      "length": "short",
+      "context_chars": 195571,
+      "context_sha256": "ac0fb7eb6f937aeeb974bf86c034b2f295a38c8cbbb69daf497b56bbc09435e6"
+    },
+    {
+      "_id": "66ebf9bf5a08c7b9b35e1f85",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "easy",
+      "length": "short",
+      "context_chars": 199543,
+      "context_sha256": "7cc75d72d3fd9f08b01d5ff5dd251937cb8f1c946b96cf0d844c434ee5643764"
+    },
+    {
+      "_id": "66f7c780bb02136c067c35e8",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Financial",
+      "difficulty": "hard",
+      "length": "long",
+      "context_chars": 1027894,
+      "context_sha256": "2ffc5675da4f3c0aa76dcd502801e90125fd8832bc2b2aeca56ce4b67a146e67"
+    },
+    {
+      "_id": "66f2a7a9821e116aacb2a721",
+      "domain": "Multi-Document QA",
+      "sub_domain": "Academic",
+      "difficulty": "easy",
+      "length": "medium",
+      "context_chars": 325270,
+      "context_sha256": "337bd5d3210058e282ea6e8785e6adf2264b480ac9c27b4b0c308d0160da3485"
+    }
+  ]
+}

@@ -69,6 +69,16 @@ function toast(message) {
 async function init() {
   try {
     state.data = await fetchJSON(`${dataPath}/overview.json`);
+    if (!state.data.cases.length) {
+      $('#dataset-title').textContent = isMath ? 'MATH 2025' : 'LongBench v2';
+      $('#dataset-summary').textContent = '0 道题 · 暂无本地评测结果';
+      $('#global-status').textContent = '暂无已保存的评测结果。可以先到知识问答或知识库管理上传资料。';
+      $('.comparison-panel').hidden = true;
+      $('#case-section').hidden = true;
+      $('#export-csv').disabled = true;
+      $(isMath ? '#math-link' : '#longbench-link').setAttribute('aria-current', 'page');
+      return;
+    }
     state.x = state.data.default_x || 'direct';
     state.y = state.data.default_y || 'repar';
     state.evidenceMethod = state.y;
